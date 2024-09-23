@@ -1,0 +1,80 @@
+/* Section Two 2 */
+.learning-section {
+    padding: 50px 0;
+}
+
+.learning-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #233876;
+}
+
+.learning-section .highlight {
+    text-decoration: underline;
+    text-decoration-color: #2eb7f3;
+}
+
+.learning-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.features-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.features-list li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.features-list li .icon {
+    background-color: #dce9f9;
+    color: #233876;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .learning-section h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* /* Section Three 3 */
+/* Ensure no padding between the cards and the container */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card {
+    background-color: rgb(198, 241, 251); /* White background for the cards */
+    border-radius: 10px;
+    border: none;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.card-title {
+    font-weight: 600;
+    color: #2A3E52; /* Customize text color */
+}
+
+.card-text {
+    color: #4A4A4A; /* Customize text color */
+}
