@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - EDUAI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block seo %}
+    <meta name="description" content="HB Development specializes in providing high-quality technology services. Join us to experience excellence, professionalism, and innovation.">
+    <meta name="keywords" content="HB Development, technology services, IT solutions, professional technology services, tech innovation">
+    <meta property="og:title" content="HB Development - Excellence in Technology Services">
+    <meta property="og:description" content="HB Development specializes in providing high-quality technology services. Join us to experience excellence, professionalism, and innovation.">
+    <meta property="og:image" content="{% static 'images/logo.png' %}">
+    <meta property="og:type" content="website">
+    {% endblock %}
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/svg+xml">
+</head>
+<body>
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm scroll-left">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'images/logo.png' %}" alt="EDUAI" width="130">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-dark ms-3" href="#">Log in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block hero_section %}
+        <!-- hero section -->
+        <div class="container mt-5 scroll-right">
+            <div class="row align-items-start">
+                <div class="col-lg-6 col-md-12">
+                    <h1 class="display-4 fw-bold">THE LEARNING REVOLUTION!</h1>
+                    <p class="lead text-muted">Discover the world's first AI-powered personalized learning platform, tailored to your educational needs.</p>
+                    <a href="#" class="btn btn-dark btn-lg">Sign up</a>
+                </div>
+                <div class="col-lg-6 col-md-12 text-center mt-4 mt-lg-0">
+                    <img src="{% static 'images/hero.jpg' %}" alt="Hero Image" class="img-fluid hero-img">
+                </div>
+            </div>
+        </div>        
+    {% endblock %}
+
+    <!-- Main Content -->
+    <main role="main" class="container mt-4" style="font-family: 'poppins', sans-serif;">
+        {% block content %}
+            <div class="container learning-section text-center">
+                <h1>Comprehensive <span class="highlight">Scientific</span><br> Learning Platform</h1>
+                <div class="row align-items-center mt-5">
+                    <!-- Image Section -->
+                    <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                        <img src="{% static 'images/container.jpg' %}" alt="Learning Illustration" class="img-fluid">
+                    </div>
+                    <!-- Text Section -->
+                    <div class="col-lg-7 col-md-12 d-flex justify-content-center align-items-center text-center">
+                        <div>
+                            <h3 class="pb-3">THE LEARNING REVOLUTION!</h3>
+                            <ul class="features-list">
+                                <li><span class="icon">1</span> Provides customized quizzes and exercises</li>
+                                <li><span class="icon">2</span> Analyzes your profile</li>
+                                <li><span class="icon">3</span> Adapts to your pace and level</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container learning-section text-center">
+                <div class="row align-items-center mt-3">
+                    <!-- Text Section -->
+                    <div class="col-lg-7 col-md-12 d-flex justify-content-start align-items-center text-start">
+                        <div>
+                            <h3 class="pb-3">MAiProf</h3>
+                            <ul class="features-list">
+                                <li><span class="icon">1</span> Available 24/7</li>
+                                <li><span class="icon">2</span> Provides alerts on errors and simpler solutions</li>
+                                <li><span class="icon">3</span> Offers targeted advice and feedback on your answers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Image Section -->
+                    <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                        <img src="{% static 'images/container1.jpg' %}" alt="Learning Illustration" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container learning-section text-center">
+                <div class="row align-items-center mt-3">
+                    <!-- Image Section -->
+                    <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                        <img src="{% static 'images/container2.jpg' %}" alt="Learning Illustration" class="img-fluid">
+                    </div>
+                    <!-- Text Section -->
+                    <div class="col-lg-7 col-md-12 d-flex justify-content-center align-items-center text-left">
+                        <div>
+                            <h3 class="pb-3" style="text-align:left !important;">One Stop Shop</h3>
+                            <ul class="features-list">
+                                <li><span class="icon">1</span> Bookstore</li>
+                                <li><span class="icon">2</span> Compliance with the national curriculum</li>
+                                <li><span class="icon">3</span> Diversity and optionality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container learning-section text-center">
+                <div class="row align-items-center mt-3">
+                    <!-- Text Section -->
+                    <div class="col-lg-7 col-md-12 d-flex justify-content-start align-items-center text-start">
+                        <div>
+                            <h3 class="pb-3">Progress Tracking</h3>
+                            <ul class="features-list">
+                                <li><span class="icon">1</span> Track progress in the educational curriculum</li>
+                                <li><span class="icon">2</span> Analyze by subject and pillar</li>
+                                <li><span class="icon">3</span> Available to students, parents, and teachers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Image Section -->
+                    <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                        <img src="{% static 'images/container3.jpg' %}" alt="Learning Illustration" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-section py-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <!-- First Card -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card p-4 shadow-sm h-100">
+                                <h4 class="card-title">
+                                    <img src="{% static 'images/icons/empowerment.png' %}" alt="Empowerment Icon" class="icon"> Empowerment
+                                </h4>
+                                <p class="card-text">
+                                    Gaining self-confidence and improving decision-making, with success depending on personal investment. Empowerment also enhances digital literacy and develops skills in the digital world.
+                                </p>
+                                <h4 class="card-title">
+                                    <img src="{% static 'images/icons/flexibility.png' %}" alt="Flexibility Icon" class="icon"> Flexibility
+                                </h4>
+                                <p class="card-text">
+                                    Availability 24/7, giving you the freedom to work at your own pace. This approach helps save time and money while increasing productivity, making it easier to balance tasks efficiently.
+                                </p>
+                            </div>
+                        </div>
+            
+                        <!-- Second Card -->
+                        <div class="col-md-8 mb-4">
+                            <div class="card p-4 shadow-sm h-100">
+                                <h4 class="card-title">
+                                    <img src="{% static 'images/icons/inclusivity.png' %}" alt="Inclusivity Icon" class="icon"> Inclusivity
+                                </h4>
+                                <p class="card-text">
+                                    Adaptability to all learning styles, providing a flexible and personalized approach to education. With virtual expert support always available, you have the freedom to be yourself while learning in a way that suits you best.
+                                </p>
+                                <h4 class="card-title">
+                                    <img src="{% static 'images/icons/equal_opportunity.png' %}" alt="Equal Opportunity Icon" class="icon"> Equal Opportunity
+                                </h4>
+                                <p class="card-text">
+                                    Access to quality program content is equal for everyone. Each person finds the learning method that suits them best, with fair rules ensuring everyone has equitable access to high-quality content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        {% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4 scroll-left">
+        <div class="container d-flex justify-content-between align-items-center">
+            <p class="mb-0">&copy; 2024 <strong>Edu AI</strong>. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and FontAwesome -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {% load static %}
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>
