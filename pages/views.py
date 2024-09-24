@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from .models import Offer
 
 def home(request):
-    return render(request, 'pages/home.html', status=404)
+    offers = Offer.objects.all()
+    return render(request, 'pages/home.html', {'offers': offers})
 
 def custom_404(request):
     return render(request, 'pages/404.html', status=404)

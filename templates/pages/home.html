@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
 {% block content %}
     <div class="container learning-section text-center">
         <h1>Comprehensive <span class="highlight">Scientific</span><br> Learning Platform</h1>
@@ -85,44 +89,195 @@
     </div>
 
     <div class="bg-section py-5">
-        <div class="container">
+        <div id="container">
             <div class="row justify-content-center">
                 <!-- First Card -->
-                <div class="col-md-4 mb-4">
-                    <div class="card p-4 shadow-sm h-100">
-                        <h4 class="card-title">
-                            <img src="{% static 'images/icons/empowerment.png' %}" alt="Empowerment Icon" class="icon"> Empowerment
+                <div class="col-md-4">
+                    <div id="card1" class="card p-4 shadow-sm h-100">
+                        <h4 id="title1" class="card-title">
+                            <img src="{% static 'images/icons/empowerment.png' %}" alt="Empowerment Icon" id="icon1" class="icon"> Empowerment
                         </h4>
-                        <p class="card-text">
+                        <p id="text1" class="card-text">
                             Gaining self-confidence and improving decision-making, with success depending on personal investment. Empowerment also enhances digital literacy and develops skills in the digital world.
                         </p>
-                        <h4 class="card-title">
-                            <img src="{% static 'images/icons/flexibility.png' %}" alt="Flexibility Icon" class="icon"> Flexibility
+                        <h4 id="title2" class="card-title">
+                            <img src="{% static 'images/icons/flexibility.png' %}" alt="Flexibility Icon" id="icon2" class="icon"> Flexibility
                         </h4>
-                        <p class="card-text">
+                        <p id="text2" class="card-text">
                             Availability 24/7, giving you the freedom to work at your own pace. This approach helps save time and money while increasing productivity, making it easier to balance tasks efficiently.
                         </p>
                     </div>
                 </div>
     
                 <!-- Second Card -->
-                <div class="col-md-8 mb-4">
-                    <div class="card p-4 shadow-sm h-100">
-                        <h4 class="card-title">
-                            <img src="{% static 'images/icons/inclusivity.png' %}" alt="Inclusivity Icon" class="icon"> Inclusivity
+                <div class="col-md-8 mt-phone">
+                    <div id="card2" class="card p-4 shadow-sm h-100">
+                        <h4 id="title3" class="card-title">
+                            <img src="{% static 'images/icons/inclusivity.png' %}" alt="Inclusivity Icon" id="icon3" class="icon"> Inclusivity
                         </h4>
-                        <p class="card-text">
+                        <p id="text3" class="card-text">
                             Adaptability to all learning styles, providing a flexible and personalized approach to education. With virtual expert support always available, you have the freedom to be yourself while learning in a way that suits you best.
                         </p>
-                        <h4 class="card-title">
-                            <img src="{% static 'images/icons/equal_opportunity.png' %}" alt="Equal Opportunity Icon" class="icon"> Equal Opportunity
+                        <h4 id="title4" class="card-title">
+                            <img src="{% static 'images/icons/equal_opportunity.png' %}" alt="Equal Opportunity Icon" id="icon4" class="icon"> Equal Opportunity
                         </h4>
-                        <p class="card-text">
+                        <p id="text4" class="card-text">
                             Access to quality program content is equal for everyone. Each person finds the learning method that suits them best, with fair rules ensuring everyone has equitable access to high-quality content.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
+
+    {% comment %} Section 4 {% endcomment %}
+
+    <div class="container edu-ai-section py-5">
+        <div class="text-center">
+            <h2 style="font-style: normal;font-weight: 600;font-size: 52px;line-height: 72px; color:#000;">Edu AI Approach</h2>
+            <p style="font-style: normal;font-weight: 500;font-size: 20px;line-height: 25px;">
+                Combines adaptive learning (controlled by the platform) and self-directed learning (controlled by the student). Students can speed up, slow down, or navigate differently with our algorithms, which enhance mastery of one concept or skill at a time.
+            </p>
+        </div>
+    
+        <!-- First row, with 2 cards in the first column and 1 card in the second column -->
+        <div class="row my-5">
+            <div class="col-md-8">
+                <div class="row">
+                    <!-- Comprehensive Review -->
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow text-left mt-3 mt-md-0" style="background-color: #233876; color:white;">
+                            <div class="card-body">
+                                <h4 class="card-title" style="color:white;">Comprehensive Review</h4>
+                                <ul class="list-unstyled" style="color:white;">
+                                    <li>Detailed lessons divided into major topics</li>
+                                    <li>Adaptive quizzes by chapter and subchapter</li>
+                                    <li>Immediate support and advice</li>
+                                </ul>
+                                <!-- Image Under Text -->
+                                <img src="{% static 'images/comprehensive-review.jpg' %}" alt="Comprehensive Review" class="img-fluid mt-3">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Review Assistance -->
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow text-left position-relative mt-5  mt-md-0" style="background-color:#D0E5FE;">
+                            <div class="card-body">
+                                <h4 class="card-title" style="color:#233876;">Review Assistance</h4>
+                                <ul class="list-unstyled" style="color:#233876;">
+                                    <li>Complete review topics</li>
+                                    <li>Optional hints</li>
+                                    <li>Guidance and support at your fingertips</li>
+                                </ul>
+                                <!-- Image positioned bottom-right using an ID -->
+                                <img id="bottom-right-image" src="{% static 'images/review-assistance.jpg' %}" alt="Review Assistance" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Second row, single full-width card for In-Class Exercises -->
+                    <div class="row mt-5  mt-md-0">
+                        <div class="col-md-12">
+                            <div class="card h-100 shadow text-left mt-3" style="background-color:#233876; color:white; position: relative;">
+                                <div class="card-body">
+                                    <h4 class="card-title">In-Class Exercises</h4>
+                                    <ul class="list-unstyled">
+                                        <li>Exercises with Closed Book</li>
+                                        <li>Clarity on topics and relative difficulty levels</li>
+                                        <li>Guidance and support at hand</li>
+                                    </ul>
+                                    <!-- Add the image to the right -->
+                                    <img src="{% static 'images/in-class-exercises.jpg' %}" alt="In-Class Exercises" class="img-fluid" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 150px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Open Book Exercises -->
+            <div class="col-md-4 mt-5  mt-md-0">
+                <div class="card h-100 shadow text-left mt-3 mt-md-0" style="background-color:#D0E5FE;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="color:#233876;">Open Book Exercises</h4>
+                        <ul class="list-unstyled" style="color:#233876;">
+                            <li>Exercises with Open Book Access</li>
+                            <li>Optional guidelines or defined methodologies</li>
+                            <li>Immediate guidance, corrections, and recommendations</li>
+                        </ul>
+                        <!-- Image positioned under text -->
+                        <img id="open-book-image" src="{% static 'images/open-book-exercises.jpg' %}" alt="Open Book Exercises" class="img-fluid mt-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% comment %} Setion 5 {% endcomment %}
+
+    <section id="personalize-learning">
+        <div class="container text-center">
+            <h2 id="main-heading">Personalize Your Learning <br> with MAiProf</h2>
+            <p id="sub-heading">Detailed explanations of difficult lesson parts</p>
+        </div>
+    
+        <div class="container" id="team-info">
+            <div class="row">
+                <div class="col-md-6" id="team-title">
+                    <h3 id="team-heading">Our team: at the forefront of innovation and academic excellence</h3>
+                </div>
+                <div class="col-md-6" id="team-description-container">
+                    <p id="team-description">Developed by a Tunisian team of talents, graduates of MIT, and gold and silver medalists in the International Olympiads in Mathematics and Informatics. Based on an academically recognized research project, it offers comprehensive content aligned with the national curriculum, developed and assessed by experienced teachers and educators.</p>
+                </div>
+            </div>
+            <div class="row" id="stats">
+                <div class="col-md-3 col-sm-6 col-12">
+                    <h4>+1,400</h4>
+                    <p>Supports detailed courses</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <h4>+3,500</h4>
+                    <p>MCQ per section</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <h4>+1,500</h4>
+                    <p>Exercises per section</p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <h4>+1,500</h4>
+                    <p>Review exercises (per chapter, trimester, and full academic year)</p>
+                </div>
+            </div>                       
+        </div>
+    </section>
+
+    {% comment %} Offers section {% endcomment %}
+    <div id="offers-section" class="container text-center my-5">
+        <h2 id="offers-title">Our Offers</h2>
+        <p id="offers-description">Exceptional prices for the launch in Morocco!</p>
+        <div id="offers-cards" class="row justify-content-center">
+            {% for offer in offers %}
+            <div id="offer-{{ offer.id }}" class="col-lg-4 col-md-6 col-sm-12 mb-4 mt-5">
+                <div id="offer-card-{{ offer.id }}" class="card p-3 h-100">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <div id="offer-icon-{{ offer.id }}" class="offer-icon mb-3">
+                            <img src="{% static 'images/icons/offer_icon.png' %}" alt="Offer Icon" id="offer-icon-img-{{ offer.id }}">
+                        </div>
+                        <h5 id="offer-title-{{ offer.id }}">{{ offer.category }}</h5>
+                        <p id="offer-monthly-price-{{ offer.id }}">
+                            <strong>{{ offer.monthly_price }} {{ offer.currency }}</strong> Monthly
+                        </p>
+                        <p id="offer-quarterly-price-{{ offer.id }}">
+                            <strong>{{ offer.quarterly_price }} {{ offer.currency }}</strong> Quarterly
+                        </p>
+                        <p id="offer-annually-price-{{ offer.id }}">
+                            <strong>{{ offer.annually_price }} {{ offer.currency }}</strong> Annually
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>    
 {% endblock %}
