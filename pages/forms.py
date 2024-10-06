@@ -1,5 +1,5 @@
 from django import forms
-from .models import ContactMessage
+from .models import ContactMessage, Appointment
 
 class ContactForm(forms.ModelForm):
     class Meta:
@@ -15,4 +15,14 @@ class ContactForm(forms.ModelForm):
                 ('Complaint 3', 'Complaint 3'),
             ], attrs={'class': 'form-control'}),
             'message': forms.Textarea(attrs={'placeholder': 'Message', 'class': 'form-control', 'rows': 4}),
+        }
+
+class AppointmentForm(forms.ModelForm):
+    class Meta:
+        model = Appointment
+        fields = ['first_name', 'last_name', 'email', 'phone', 'appointment_date', 'appointment_time']
+
+        widgets = {
+            'appointment_date': forms.DateInput(attrs={'type': 'date'}),
+            'appointment_time': forms.TimeInput(attrs={'type': 'time'}),
         }

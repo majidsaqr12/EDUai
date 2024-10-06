@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
-from .models import Offer, Testimonial, FAQCategory
-from .forms import ContactForm
+from .models import Offer, Testimonial, FAQCategory, GuideStep
+from .forms import ContactForm, AppointmentForm
+from django.contrib import messages
+
 
 def home(request):
     offers = Offer.objects.all()
@@ -25,6 +27,23 @@ def home(request):
         'categories': categories, 
         'form': form 
     })
+
+def guide_view(request):
+    guide_steps = GuideStep.objects.all().order_by('step_number')
+    return render(request, 'pages/guide_page.html', {'guide_steps': guide_steps})
+
+
+def book_appointment(request):
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Appointment booked successfully!')
+            return redirect('success')
+    else:
+        form = AppointmentForm()
+
+    return render(request, 'pages/book_appointment.html', {'form': form})
 
 
 def custom_404(request):
