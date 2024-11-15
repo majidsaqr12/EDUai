@@ -87,10 +87,11 @@
 
 <div class="thank-you-message">
     <i class="ion-checkmark-circle"></i>
-    <h1>Thank You for Registering!</h1>
-    <p>Your registration was successful. We’ll review your submission and reach out soon with the next steps.</p>
+    <h1>{% trans "Thank You for Registering!" %}</h1>
+    <p>{% trans "Your registration was successful. We’ll review your submission and reach out soon with the next steps." %}</p>
     <div class="mt-5">
-        <a href="{% url 'home' %}" class="btn btn-primary-1">Back to Home</a>
+        <a href="{% url 'home' %}" class="btn btn-primary-1">{% trans "Back to Home" %}</a>
     </div>
 </div>
+
 {% endblock %}

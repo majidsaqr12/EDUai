@@ -2,16 +2,21 @@ from django.shortcuts import render
 import requests
 from django.http import JsonResponse
 import json
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def subjects_view(request):
     return render(request, 'accounts/subjects.html')
 
+@login_required
 def chatbot_view(request):
     return render(request, 'accounts/chatbot.html')
 
+@login_required
 def response_view(request):
     return render(request, 'accounts/response.html')
 
+@login_required
 def quiz_view(request):
     return render(request, 'accounts/quiz.html')
 

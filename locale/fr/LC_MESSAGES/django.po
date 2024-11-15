@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-13 06:08+0200\n"
+"POT-Creation-Date: 2024-11-15 15:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1242,134 +1242,284 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#: templates/accounts/chatbot.html:79 templates/accounts/chatbot.html:242
-#: templates/accounts/index.html:57 templates/accounts/index.html:220
-#: templates/accounts/profile_edit.html:110
-#: templates/accounts/profile_edit.html:274 templates/accounts/subjects.html:92
-#: templates/accounts/subjects.html:255 templates/base.html:82
+#: templates/accounts/chatbot.html:98 templates/accounts/response.html:165
+msgid "Robot Icon"
+msgstr ""
+
+#: templates/accounts/chatbot.html:99
+msgid "Ask Your Question Below"
+msgstr ""
+
+#: templates/accounts/chatbot.html:100
+msgid "Get instant answers powered by AI."
+msgstr ""
+
+#: templates/accounts/chatbot.html:108
+msgid "What's on your mind?"
+msgstr ""
+
+#: templates/accounts/chatbot.html:117
+#, fuzzy
+#| msgid "Leave us a Message"
+msgid "Send Message"
+msgstr "Laissez-nous un message"
+
+#: templates/accounts/index.html:15
+msgid ""
+"Access your EduAI dashboard to manage your profile, view learning insights, "
+"and track your educational progress with AI-powered analytics and "
+"personalized tools."
+msgstr ""
+
+#: templates/accounts/index.html:16
+msgid ""
+"EduAI, user dashboard, profile management, AI education, learning analytics, "
+"personalized education"
+msgstr ""
+
+#: templates/accounts/index.html:17 templates/accounts/index.html:22
+msgid "My Dashboard - EduAI"
+msgstr ""
+
+#: templates/accounts/index.html:18
+msgid ""
+"Manage your profile and view AI-driven learning insights on your EduAI "
+"dashboard. Track progress, access materials, and enhance your educational "
+"journey."
+msgstr ""
+
+#: templates/accounts/index.html:23
+msgid ""
+"Explore your EduAI dashboard to access personalized learning tools and AI-"
+"driven educational insights."
+msgstr ""
+
+#: templates/accounts/index.html:157 templates/accounts/index.html:314
+#: templates/accounts/profile_edit.html:118
+#: templates/accounts/profile_edit.html:266 templates/base.html:120
 msgid "EDUAI"
 msgstr "EDUAI"
 
-#: templates/accounts/chatbot.html:85 templates/accounts/chatbot.html:248
-#: templates/accounts/index.html:63 templates/accounts/index.html:226
-#: templates/accounts/profile_edit.html:116 templates/accounts/subjects.html:98
-#: templates/accounts/subjects.html:261
+#: templates/accounts/index.html:163
 msgid "New chat"
 msgstr "Nouvelle discussion"
 
-#: templates/accounts/chatbot.html:113 templates/accounts/chatbot.html:276
-#: templates/accounts/index.html:91 templates/accounts/index.html:254
-#: templates/accounts/profile_edit.html:145
-#: templates/accounts/profile_edit.html:309
-#: templates/accounts/subjects.html:126 templates/accounts/subjects.html:289
+#: templates/accounts/index.html:191 templates/accounts/index.html:340
+#: templates/accounts/profile_edit.html:144
+#: templates/accounts/profile_edit.html:292
 msgid "My space"
 msgstr "Mon espace"
 
-#: templates/accounts/chatbot.html:124 templates/accounts/chatbot.html:288
-#: templates/accounts/index.html:102 templates/accounts/index.html:266
-#: templates/accounts/profile_edit.html:156
-#: templates/accounts/profile_edit.html:321
-#: templates/accounts/subjects.html:137 templates/accounts/subjects.html:301
+#: templates/accounts/index.html:202 templates/accounts/index.html:352
+#: templates/accounts/profile_edit.html:155
+#: templates/accounts/profile_edit.html:304
 msgid "Material"
 msgstr "Matière"
 
-#: templates/accounts/chatbot.html:133 templates/accounts/chatbot.html:297
-#: templates/accounts/index.html:111 templates/accounts/index.html:275
-#: templates/accounts/profile_edit.html:165
-#: templates/accounts/profile_edit.html:330
-#: templates/accounts/subjects.html:146 templates/accounts/subjects.html:310
+#: templates/accounts/index.html:211 templates/accounts/index.html:361
+#: templates/accounts/profile_edit.html:164
+#: templates/accounts/profile_edit.html:313
 msgid "Daily Exam"
 msgstr "Examen quotidien"
 
-#: templates/accounts/chatbot.html:142 templates/accounts/chatbot.html:306
-#: templates/accounts/index.html:120 templates/accounts/index.html:284
-#: templates/accounts/profile_edit.html:174
-#: templates/accounts/profile_edit.html:339
-#: templates/accounts/subjects.html:155 templates/accounts/subjects.html:319
+#: templates/accounts/index.html:220 templates/accounts/index.html:370
+#: templates/accounts/profile_edit.html:173
+#: templates/accounts/profile_edit.html:322
 msgid "Planner"
 msgstr "Planificateur"
 
-#: templates/accounts/chatbot.html:167 templates/accounts/chatbot.html:331
-#: templates/accounts/index.html:145 templates/accounts/index.html:309
-#: templates/accounts/profile_edit.html:199
-#: templates/accounts/profile_edit.html:364
-#: templates/accounts/subjects.html:180 templates/accounts/subjects.html:344
+#: templates/accounts/index.html:245 templates/accounts/index.html:395
+#: templates/accounts/profile_edit.html:198
+#: templates/accounts/profile_edit.html:347
 msgid "Pages"
 msgstr "Pages"
 
-#: templates/accounts/chatbot.html:196 templates/accounts/chatbot.html:360
-#: templates/accounts/index.html:174 templates/accounts/index.html:338
-#: templates/accounts/profile_edit.html:228
-#: templates/accounts/profile_edit.html:393
-#: templates/accounts/subjects.html:209 templates/accounts/subjects.html:373
+#: templates/accounts/index.html:272 templates/accounts/index.html:422
+#: templates/accounts/profile_edit.html:225
+#: templates/accounts/profile_edit.html:374
 msgid "Edit profile"
 msgstr "Modifier le profil"
 
-#: templates/accounts/chatbot.html:201 templates/accounts/chatbot.html:365
-#: templates/accounts/index.html:179 templates/accounts/index.html:343
-#: templates/accounts/profile_edit.html:233
-#: templates/accounts/profile_edit.html:398
-#: templates/accounts/subjects.html:214 templates/accounts/subjects.html:378
-msgid "About"
-msgstr "À propos"
+#: templates/accounts/index.html:275 templates/accounts/index.html:425
+#: templates/accounts/profile_edit.html:228
+#: templates/accounts/profile_edit.html:377
+#, fuzzy
+#| msgid "New Password"
+msgid "Change password"
+msgstr "Nouveau mot de passe"
 
-#: templates/accounts/chatbot.html:206 templates/accounts/chatbot.html:370
-#: templates/accounts/index.html:184 templates/accounts/index.html:348
-#: templates/accounts/profile_edit.html:238
-#: templates/accounts/profile_edit.html:403
-#: templates/accounts/subjects.html:219 templates/accounts/subjects.html:383
-msgid "Services"
-msgstr "Services"
+#: templates/accounts/index.html:278 templates/accounts/index.html:428
+#: templates/accounts/profile_edit.html:231
+#: templates/accounts/profile_edit.html:380
+msgid "Home"
+msgstr ""
 
-#: templates/accounts/chatbot.html:591 templates/accounts/index.html:569
-#: templates/accounts/profile_edit.html:625
-#: templates/accounts/subjects.html:604
+#: templates/accounts/index.html:457 templates/accounts/profile_edit.html:433
+msgid "Search for Chats"
+msgstr "Rechercher des discussions"
+
+#: templates/accounts/index.html:457 templates/accounts/profile_edit.html:434
+msgid "Search"
+msgstr ""
+
+#: templates/accounts/index.html:533 templates/accounts/profile_edit.html:537
 msgid "Log out"
 msgstr "Déconnexion"
 
-#: templates/accounts/login.html:34
+#: templates/accounts/index.html:548
+msgid "Hello"
+msgstr ""
+
+#: templates/accounts/index.html:564
+msgid "Total clients"
+msgstr ""
+
+#: templates/accounts/index.html:576
+msgid "Charts"
+msgstr ""
+
+#: templates/accounts/index.html:581
+msgid "Revenue"
+msgstr ""
+
+#: templates/accounts/index.html:587
+msgid "Shirts"
+msgstr ""
+
+#: templates/accounts/index.html:591
+msgid "Shoes"
+msgstr ""
+
+#: templates/accounts/index.html:595
+msgid "Bags"
+msgstr ""
+
+#: templates/accounts/index.html:602
+msgid "Traffic"
+msgstr ""
+
+#: templates/accounts/index.html:608
+msgid "Organic"
+msgstr ""
+
+#: templates/accounts/index.html:612
+msgid "Paid"
+msgstr ""
+
+#: templates/accounts/login.html:7
+msgid ""
+"Sign in to EduAI to unlock personalized educational features and AI-powered "
+"learning tools designed to enhance your academic journey. Join a community "
+"dedicated to innovative and effective learning."
+msgstr ""
+
+#: templates/accounts/login.html:8
+msgid ""
+"EduAI, sign in, login, personalized learning, AI education, educational "
+"platform, user access"
+msgstr ""
+
+#: templates/accounts/login.html:9 templates/accounts/login.html:14
+msgid "Sign In to EduAI - Personalized Learning Platform"
+msgstr ""
+
+#: templates/accounts/login.html:10
+msgid ""
+"Access your EduAI account to enjoy tailored educational experiences powered "
+"by artificial intelligence. Dive into a smarter way to learn."
+msgstr ""
+
+#: templates/accounts/login.html:15
+msgid ""
+"Log in to your EduAI account for access to AI-powered educational tools and "
+"a personalized learning experience."
+msgstr ""
+
+#: templates/accounts/login.html:48
 msgid "Sign In"
 msgstr "Se connecter"
 
-#: templates/accounts/login.html:35
+#: templates/accounts/login.html:49
 msgid "Sign in to enjoy the features of Edu AI Assistant"
 msgstr "Connectez-vous pour profiter des fonctionnalités de l'assistant Edu AI"
 
-#: templates/accounts/login.html:44 templates/accounts/login.html:45
+#: templates/accounts/login.html:58 templates/accounts/login.html:59
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
-#: templates/accounts/login.html:48 templates/accounts/login.html:49
+#: templates/accounts/login.html:62 templates/accounts/login.html:63
 msgid "Password"
 msgstr "Mot de passe"
 
-#: templates/accounts/login.html:52
+#: templates/accounts/login.html:66
 msgid "Forgot Password?"
 msgstr "Mot de passe oublié ?"
 
-#: templates/accounts/login.html:54
+#: templates/accounts/login.html:68
 msgid "LOGIN"
 msgstr "CONNEXION"
 
-#: templates/accounts/login.html:56
+#: templates/accounts/login.html:70
 msgid "Don't have an account?"
 msgstr "Vous n'avez pas de compte ?"
 
-#: templates/accounts/login.html:56
+#: templates/accounts/login.html:70
 msgid "Sign Up"
 msgstr "Inscription"
 
-#: templates/accounts/password_reset_form.html:31
-msgid "Reset Your Password"
-msgstr "Réinitialisez votre mot de passe"
+#: templates/accounts/password_change_done.html:72
+msgid "Password Changed Successfully"
+msgstr ""
 
+#: templates/accounts/password_change_done.html:73
+msgid ""
+"Your password has been updated. You can now use your new password to log in "
+"next time."
+msgstr ""
+
+#: templates/accounts/password_change_done.html:74
+#, fuzzy
+#| msgid "Save Profile"
+msgid "Back to Profile"
+msgstr "Enregistrer le profil"
+
+#: templates/accounts/password_change_form.html:128
+#, fuzzy
+#| msgid "New Password"
+msgid "Change Password"
+msgstr "Nouveau mot de passe"
+
+#: templates/accounts/password_change_form.html:129
+msgid ""
+"Enter your current password, followed by your new password twice to confirm "
+"it."
+msgstr ""
+
+#: templates/accounts/password_change_form.html:147
+#, fuzzy
+#| msgid "Password"
+msgid "Old Password"
+msgstr "Mot de passe"
+
+#: templates/accounts/password_change_form.html:151
 #: templates/accounts/password_reset_form.html:35
 msgid "New Password"
 msgstr "Nouveau mot de passe"
 
+#: templates/accounts/password_change_form.html:156
 #: templates/accounts/password_reset_form.html:39
 msgid "Confirm New Password"
 msgstr "Confirmer le nouveau mot de passe"
+
+#: templates/accounts/password_change_form.html:159
+#, fuzzy
+#| msgid "New Password"
+msgid "Change My Password"
+msgstr "Nouveau mot de passe"
+
+#: templates/accounts/password_reset_form.html:31
+msgid "Reset Your Password"
+msgstr "Réinitialisez votre mot de passe"
 
 #: templates/accounts/password_reset_form.html:42
 msgid "RESET PASSWORD"
@@ -1381,7 +1531,8 @@ msgstr "Réinitialiser le mot de passe"
 
 #: templates/accounts/password_reset_request.html:32
 msgid "Enter your email to receive a password reset code"
-msgstr "Entrez votre email pour recevoir un code de réinitialisation du mot de passe"
+msgstr ""
+"Entrez votre email pour recevoir un code de réinitialisation du mot de passe"
 
 #: templates/accounts/password_reset_request.html:36
 #: templates/accounts/password_reset_request.html:37
@@ -1412,501 +1563,824 @@ msgstr "Entrer le code"
 msgid "VERIFY"
 msgstr "VÉRIFIER"
 
-#: templates/accounts/profile_edit.html:280
-msgid "New Chat"
-msgstr "Nouvelle discussion"
-
-#: templates/accounts/profile_edit.html:457
-msgid "Search for Chats"
-msgstr "Rechercher des discussions"
-
-
-#: templates/accounts/profile_edit.html:650
+#: templates/accounts/profile_edit.html:563
 msgid "Profile Settings"
 msgstr "Paramètres du profil"
 
-#: templates/accounts/profile_edit.html:655
-#: templates/pages/book_appointment.html:62
+#: templates/accounts/profile_edit.html:568
+#: templates/pages/book_appointment.html:75
 msgid "First Name"
 msgstr "Prénom"
 
-#: templates/accounts/profile_edit.html:659
-#: templates/pages/book_appointment.html:69
+#: templates/accounts/profile_edit.html:572
+#: templates/pages/book_appointment.html:82
 msgid "Last Name"
 msgstr "Nom de famille"
 
-#: templates/accounts/profile_edit.html:666
-#: templates/pages/book_appointment.html:86
+#: templates/accounts/profile_edit.html:579
+#: templates/pages/book_appointment.html:99
 msgid "Phone Number"
 msgstr "Numéro de téléphone"
 
-#: templates/accounts/profile_edit.html:670
+#: templates/accounts/profile_edit.html:583
 msgid "Gender"
 msgstr "Genre"
 
-#: templates/accounts/profile_edit.html:672
+#: templates/accounts/profile_edit.html:585
 msgid "Male"
 msgstr "Homme"
 
-#: templates/accounts/profile_edit.html:673
+#: templates/accounts/profile_edit.html:586
 msgid "Female"
 msgstr "Femme"
 
-#: templates/accounts/profile_edit.html:674
+#: templates/accounts/profile_edit.html:587
 msgid "Other"
 msgstr "Autre"
 
-#: templates/accounts/profile_edit.html:678
+#: templates/accounts/profile_edit.html:591
 msgid "Date of Birth"
 msgstr "Date de naissance"
 
-#: templates/accounts/profile_edit.html:682
+#: templates/accounts/profile_edit.html:595
 msgid "Profile Image"
 msgstr "Image de profil"
 
-#: templates/accounts/profile_edit.html:688
+#: templates/accounts/profile_edit.html:601
 msgid "Save Profile"
 msgstr "Enregistrer le profil"
 
-#: templates/accounts/signup.html:108
+#: templates/accounts/quiz.html:152 templates/accounts/response.html:183
+msgid "Quiz"
+msgstr ""
+
+#: templates/accounts/quiz.html:153
+msgid "Go back to EduGuide"
+msgstr ""
+
+#: templates/accounts/response.html:166
+msgid "Here's the answer for your question"
+msgstr ""
+
+#: templates/accounts/response.html:167
+msgid "What are the layers of the atmosphere?"
+msgstr ""
+
+#: templates/accounts/response.html:184
+msgid "Another Question"
+msgstr ""
+
+#: templates/accounts/response.html:188
+msgid ""
+"Want to test your knowledge? Click the 'Quiz' button to take a short quiz "
+"based on the question you asked. Challenge yourself and see how much you've "
+"learned!"
+msgstr ""
+
+#: templates/accounts/response.html:197
+msgid ""
+"Choose how many questions you want and the type of questions. Once you're "
+"ready, click 'Generate Quiz' to start practicing."
+msgstr ""
+
+#: templates/accounts/response.html:202
+msgid "Number of Questions*"
+msgstr ""
+
+#: templates/accounts/response.html:204
+msgid "5"
+msgstr ""
+
+#: templates/accounts/response.html:205
+msgid "10"
+msgstr ""
+
+#: templates/accounts/response.html:206
+msgid "15"
+msgstr ""
+
+#: templates/accounts/response.html:207
+msgid "20"
+msgstr ""
+
+#: templates/accounts/response.html:212
+msgid "Question Type*"
+msgstr ""
+
+#: templates/accounts/response.html:214
+msgid "Multiple Choice"
+msgstr ""
+
+#: templates/accounts/response.html:215
+msgid "True/False"
+msgstr ""
+
+#: templates/accounts/response.html:220
+msgid "Generate Quiz"
+msgstr ""
+
+#: templates/accounts/signup.html:9
+msgid ""
+"Create an EduAI account to access personalized AI-powered educational tools "
+"and enhance your learning journey. Register now to explore our innovative "
+"learning features."
+msgstr ""
+
+#: templates/accounts/signup.html:10
+msgid ""
+"EduAI, sign up, registration, personalized learning, AI in education, "
+"educational platform, account creation"
+msgstr ""
+
+#: templates/accounts/signup.html:11 templates/accounts/signup.html:16
+msgid "Sign Up for EduAI - Personalized Learning Platform"
+msgstr ""
+
+#: templates/accounts/signup.html:12
+msgid ""
+"Join EduAI today and experience a new era of personalized, AI-driven "
+"learning designed to meet your educational needs."
+msgstr ""
+
+#: templates/accounts/signup.html:17
+msgid ""
+"Create your EduAI account for access to AI-driven educational tools and a "
+"tailored learning experience."
+msgstr ""
+
+#: templates/accounts/signup.html:135
 msgid "Step 1: Sign Up"
 msgstr "Étape 1 : Inscription"
 
-#: templates/accounts/signup.html:113
+#: templates/accounts/signup.html:140
 msgid "Step 2: School Information"
 msgstr "Étape 2 : Informations sur l'école"
 
-#: templates/accounts/signup.html:118
+#: templates/accounts/signup.html:145
 msgid "Step 3: Personal Information"
 msgstr "Étape 3 : Informations personnelles"
 
-#: templates/accounts/signup.html:159
+#: templates/accounts/signup.html:186
 msgid "Step 4: Account Information"
 msgstr "Étape 4 : Informations du compte"
 
-#: templates/accounts/signup.html:189 templates/pages/home.html:319
+#: templates/accounts/signup.html:216 templates/pages/home.html:445
 msgid "Previous"
 msgstr "Précédent"
 
-#: templates/accounts/signup.html:192 templates/pages/home.html:326
+#: templates/accounts/signup.html:219 templates/pages/home.html:452
 msgid "Next"
 msgstr "Suivant"
 
-#: templates/accounts/signup.html:194
+#: templates/accounts/signup.html:221
 msgid "Register"
 msgstr "S'inscrire"
 
-#: templates/accounts/signup.html:198
+#: templates/accounts/signup.html:226
 msgid "Return to the login page"
 msgstr "Retour à la page de connexion"
 
-#: templates/base.html:7
+#: templates/accounts/subjects.html:87
+msgid "Icon"
+msgstr ""
+
+#: templates/accounts/subjects.html:88
+msgid ""
+"I'm here to guide you! Select a subject, and we'll get started right away."
+msgstr ""
+
+#: templates/accounts/subjects.html:96
+msgid "Mathematics Icon"
+msgstr ""
+
+#: templates/accounts/subjects.html:97 templates/accounts/subjects.html:110
+#: templates/accounts/subjects.html:123 templates/accounts/subjects.html:136
+#: templates/accounts/subjects.html:149 templates/accounts/subjects.html:162
+#: templates/accounts/subjects.html:175 templates/accounts/subjects.html:188
+#: templates/accounts/subjects.html:201 templates/accounts/subjects.html:214
+#, fuzzy
+#| msgid "Offer Icon"
+msgid "Arrow Icon"
+msgstr "Icône de l'offre"
+
+#: templates/accounts/subjects.html:99
+msgid "Mathematics"
+msgstr ""
+
+#: templates/accounts/subjects.html:109
+msgid "English Icon"
+msgstr ""
+
+#: templates/accounts/subjects.html:112
+msgid "English"
+msgstr ""
+
+#: templates/accounts/subjects.html:122
+#, fuzzy
+#| msgid "Flexibility Icon"
+msgid "Chemistry Icon"
+msgstr "Icône de la flexibilité"
+
+#: templates/accounts/subjects.html:125
+msgid "Chemistry"
+msgstr ""
+
+#: templates/accounts/subjects.html:135
+msgid "Geography Icon"
+msgstr ""
+
+#: templates/accounts/subjects.html:138
+msgid "Geography"
+msgstr ""
+
+#: templates/accounts/subjects.html:148
+msgid "Science Icon"
+msgstr ""
+
+#: templates/accounts/subjects.html:151
+#, fuzzy
+#| msgid "Scientific"
+msgid "Science"
+msgstr "Scientifique"
+
+#: templates/accounts/subjects.html:161
+msgid "History Icon"
+msgstr ""
+
+#: templates/accounts/subjects.html:164
+msgid "History"
+msgstr ""
+
+#: templates/accounts/subjects.html:174
+msgid "Biology Icon"
+msgstr ""
+
+#: templates/accounts/subjects.html:177
+msgid "Biology"
+msgstr ""
+
+#: templates/accounts/subjects.html:187
+msgid "Physics Icon"
+msgstr ""
+
+#: templates/accounts/subjects.html:190
+msgid "Physics"
+msgstr ""
+
+#: templates/accounts/subjects.html:200
+msgid "Arabic Icon"
+msgstr ""
+
+#: templates/accounts/subjects.html:203
+msgid "Arabic"
+msgstr ""
+
+#: templates/accounts/subjects.html:213
+msgid "French Icon"
+msgstr ""
+
+#: templates/accounts/subjects.html:216
+msgid "French"
+msgstr ""
+
+#: templates/base.html:8
 msgid "Accueil - EDUAI"
 msgstr "Accueil - EDUAI"
 
-#: templates/base.html:17 templates/base.html:20
-msgid ""
-"HB Development se spécialise dans la fourniture de services technologiques "
-"de haute qualité. Rejoignez-nous pour vivre l'excellence, le "
-"professionnalisme et l'innovation."
-msgstr "HB Development se spécialise dans la fourniture de services technologiques de haute qualité. Rejoignez-nous pour vivre l'excellence, le professionnalisme et l'innovation."
-
 #: templates/base.html:18
 msgid ""
-"HB Development, services technologiques, solutions informatiques, services "
-"professionnels en technologie, innovation technologique"
-msgstr "HB Development, services technologiques, solutions informatiques, services professionnels en technologie, innovation technologique"
+"EduAI est la première plateforme d'apprentissage personnalisée utilisant "
+"l'intelligence artificielle pour s'adapter aux besoins de chaque étudiant. "
+"Offrant des outils éducatifs interactifs, innovants et personnalisés, EduAI "
+"redéfinit l'apprentissage numérique."
+msgstr ""
 
 #: templates/base.html:19
-msgid "HB Development - Excellence dans les services technologiques"
-msgstr "HB Development - Excellence dans les services technologiques"
+msgid ""
+"EduAI, plateforme d'apprentissage IA, apprentissage personnalisé, éducation "
+"numérique, technologie éducative, intelligence artificielle en éducation"
+msgstr ""
 
-#: templates/base.html:22
-msgid "site web"
-msgstr "site web"
+#: templates/base.html:20
+msgid "EduAI - La révolution de l'apprentissage numérique"
+msgstr ""
 
-#: templates/base.html:84
-msgid "Basculer la navigation"
+#: templates/base.html:21
+msgid ""
+"EduAI utilise l'intelligence artificielle pour offrir une éducation "
+"personnalisée et adaptée aux besoins uniques de chaque apprenant. Découvrez "
+"une nouvelle ère de l'éducation."
+msgstr ""
+
+#: templates/base.html:26
+msgid "EduAI - La révolution de l'apprentissage"
+msgstr ""
+
+#: templates/base.html:27
+msgid ""
+"EduAI propose un apprentissage intelligent et sur mesure avec des "
+"technologies d'IA de pointe pour les étudiants modernes."
+msgstr ""
+
+#: templates/base.html:124
+#, fuzzy
+#| msgid "Basculer la navigation"
+msgid "Toggle navigation"
 msgstr "Basculer la navigation"
 
-#: templates/base.html:90
+#: templates/base.html:132
 msgid "Accueil"
 msgstr "Accueil"
 
-#: templates/base.html:93
+#: templates/base.html:135
 msgid "Notre Équipe"
 msgstr "Notre Équipe"
 
-#: templates/base.html:96
+#: templates/base.html:138
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/base.html:113
-msgid "Déconnexion"
-msgstr "Déconnexion"
-
-#: templates/base.html:117
+#: templates/base.html:156
 msgid "Connexion"
 msgstr "Connexion"
 
-#: templates/base.html:162
+#: templates/base.html:201
 msgid "LA RÉVOLUTION DE L'APPRENTISSAGE !"
 msgstr "LA RÉVOLUTION DE L'APPRENTISSAGE !"
 
-#: templates/base.html:163
+#: templates/base.html:202
 msgid ""
 "Découvrez la première plateforme d'apprentissage personnalisée au monde "
 "propulsée par l'IA, adaptée à vos besoins éducatifs."
-msgstr "Découvrez la première plateforme d'apprentissage personnalisée au monde propulsée par l'IA, adaptée à vos besoins éducatifs."
+msgstr ""
+"Découvrez la première plateforme d'apprentissage personnalisée au monde "
+"propulsée par l'IA, adaptée à vos besoins éducatifs."
 
-
-#: templates/base.html:166
+#: templates/base.html:205
 msgid "Inscription"
 msgstr "Inscription"
 
-#: templates/base.html:170
+#: templates/base.html:209
 msgid "Image Héros"
 msgstr "Image Héros"
 
-#: templates/base.html:187
+#: templates/base.html:226
 msgid "Edu AI"
 msgstr "Edu AI"
 
-#: templates/base.html:187
+#: templates/base.html:226
 msgid "Tous droits réservés."
 msgstr "Tous droits réservés."
 
-#: templates/pages/book_appointment.html:55
+#: templates/pages/book_appointment.html:10
+msgid ""
+"Planifiez votre rendez-vous avec EduAI pour explorer des solutions "
+"d'apprentissage personnalisées adaptées à vos besoins éducatifs. Utilisez "
+"notre plateforme de rendez-vous pour organiser des sessions individuelles "
+"avec nos experts en intelligence artificielle éducative."
+msgstr ""
+
+#: templates/pages/book_appointment.html:11
+msgid ""
+"EduAI, rendez-vous éducatif, consultation en éducation IA, solutions "
+"d'apprentissage, réservation de rendez-vous"
+msgstr ""
+
+#: templates/pages/book_appointment.html:12
+#: templates/pages/book_appointment.html:17
+msgid "Planifiez votre rendez-vous - EduAI"
+msgstr ""
+
+#: templates/pages/book_appointment.html:13
+msgid ""
+"Réservez une consultation avec EduAI pour découvrir nos solutions "
+"d'apprentissage personnalisées et propulsées par IA."
+msgstr ""
+
+#: templates/pages/book_appointment.html:18
+msgid ""
+"Découvrez comment EduAI peut révolutionner votre apprentissage avec des "
+"consultations personnalisées."
+msgstr ""
+
+#: templates/pages/book_appointment.html:68
 msgid "Schedule Your Appointment"
 msgstr "Planifiez votre rendez-vous"
 
-#: templates/pages/book_appointment.html:76
+#: templates/pages/book_appointment.html:89
 msgid "Email Address"
 msgstr "Adresse e-mail"
 
-#: templates/pages/book_appointment.html:93
+#: templates/pages/book_appointment.html:106
 msgid "Appointment Date"
 msgstr "Date du rendez-vous"
 
-#: templates/pages/book_appointment.html:100
+#: templates/pages/book_appointment.html:113
 msgid "Appointment Time"
 msgstr "Heure du rendez-vous"
 
-#: templates/pages/book_appointment.html:106
+#: templates/pages/book_appointment.html:119
 msgid "Book an Appointment"
 msgstr "Prendre rendez-vous"
 
-#: templates/pages/guide_page.html:130 templates/pages/home.html:306
+#: templates/pages/guide_page.html:10
+msgid ""
+"Explore our EduAI video guides and tutorials to learn more about AI-powered "
+"educational tools, step-by-step instructions, and how to make the most of "
+"our platform. Watch our videos for a comprehensive introduction to our "
+"unique features and benefits."
+msgstr ""
+
+#: templates/pages/guide_page.html:11
+msgid ""
+"EduAI, tutoriels vidéo, guides éducatifs, apprentissage IA, vidéos de "
+"formation, éducation numérique"
+msgstr ""
+
+#: templates/pages/guide_page.html:12 templates/pages/guide_page.html:17
+msgid "Guides et tutoriels vidéo - EduAI"
+msgstr ""
+
+#: templates/pages/guide_page.html:13
+msgid ""
+"Découvrez les guides vidéo d'EduAI pour apprendre facilement nos outils "
+"d'apprentissage personnalisés basés sur l'IA."
+msgstr ""
+
+#: templates/pages/guide_page.html:18
+msgid ""
+"Accédez à nos vidéos pour une introduction détaillée à EduAI et nos "
+"solutions d'apprentissage personnalisées."
+msgstr ""
+
+#: templates/pages/guide_page.html:143 templates/pages/home.html:432
 msgid "Your browser does not support the video tag."
 msgstr "Votre navigateur ne prend pas en charge la balise vidéo."
 
-#: templates/pages/guide_page.html:139
+#: templates/pages/guide_page.html:152
 msgid "Try for free"
 msgstr "Essayer gratuitement"
 
-#: templates/pages/guide_page.html:142
+#: templates/pages/guide_page.html:155
 msgid "Subscribe"
 msgstr "S'abonner"
 
-#: templates/pages/home.html:12
+#: templates/pages/home.html:142
 msgid "Comprehensive"
 msgstr "Complet"
 
-#: templates/pages/home.html:12
+#: templates/pages/home.html:142
 msgid "Scientific"
 msgstr "Scientifique"
 
-#: templates/pages/home.html:12
+#: templates/pages/home.html:142
 msgid "Learning Platform"
 msgstr "Plateforme d'apprentissage"
 
-#: templates/pages/home.html:16 templates/pages/home.html:48
-#: templates/pages/home.html:58 templates/pages/home.html:89
+#: templates/pages/home.html:146 templates/pages/home.html:178
+#: templates/pages/home.html:188 templates/pages/home.html:219
 msgid "Learning Illustration"
 msgstr "Illustration de l'apprentissage"
 
-#: templates/pages/home.html:21
+#: templates/pages/home.html:151
 msgid "THE LEARNING REVOLUTION!"
 msgstr "LA RÉVOLUTION DE L'APPRENTISSAGE !"
 
-#: templates/pages/home.html:23
+#: templates/pages/home.html:153
 msgid "Provides customized quizzes and exercises"
 msgstr "Fournit des quiz et exercices personnalisés"
 
-#: templates/pages/home.html:24
+#: templates/pages/home.html:154
 msgid "Analyzes your profile"
 msgstr "Analyse votre profil"
 
-#: templates/pages/home.html:25
+#: templates/pages/home.html:155
 msgid "Adapts to your pace and level"
 msgstr "S'adapte à votre rythme et niveau"
 
-#: templates/pages/home.html:38
+#: templates/pages/home.html:168
 msgid "MAiProf"
 msgstr "MAiProf"
 
-#: templates/pages/home.html:40
+#: templates/pages/home.html:170
 msgid "Available 24/7"
 msgstr "Disponible 24/7"
 
-#: templates/pages/home.html:41
+#: templates/pages/home.html:171
 msgid "Provides alerts on errors and simpler solutions"
 msgstr "Fournit des alertes sur les erreurs et des solutions simplifiées"
 
-#: templates/pages/home.html:42
+#: templates/pages/home.html:172
 msgid "Offers targeted advice and feedback on your answers"
 msgstr "Propose des conseils ciblés et des retours sur vos réponses"
 
-#: templates/pages/home.html:63
+#: templates/pages/home.html:193
 msgid "One Stop Shop"
 msgstr "Guichet unique"
 
-#: templates/pages/home.html:65
+#: templates/pages/home.html:195
 msgid "Bookstore"
 msgstr "Librairie"
 
-#: templates/pages/home.html:66
+#: templates/pages/home.html:196
 msgid "Compliance with the national curriculum"
 msgstr "Conformité avec le programme national"
 
-#: templates/pages/home.html:67
+#: templates/pages/home.html:197
 msgid "Diversity and optionality"
 msgstr "Diversité et options"
 
-#: templates/pages/home.html:79
+#: templates/pages/home.html:209
 msgid "Progress Tracking"
 msgstr "Suivi des progrès"
 
-#: templates/pages/home.html:81
+#: templates/pages/home.html:211
 msgid "Track progress in the educational curriculum"
 msgstr "Suivre les progrès dans le programme éducatif"
 
-#: templates/pages/home.html:82
+#: templates/pages/home.html:212
 msgid "Analyze by subject and pillar"
 msgstr "Analyse par matière et pilier"
 
-#: templates/pages/home.html:83
+#: templates/pages/home.html:213
 msgid "Available to students, parents, and teachers"
 msgstr "Disponible pour les élèves, parents et enseignants"
 
-#: templates/pages/home.html:101
+#: templates/pages/home.html:231
 msgid "Empowerment Icon"
 msgstr "Icône de l'autonomisation"
 
-#: templates/pages/home.html:101
+#: templates/pages/home.html:231
 msgid "Empowerment"
 msgstr "Autonomisation"
 
-#: templates/pages/home.html:104
+#: templates/pages/home.html:234
 msgid ""
 "Gaining self-confidence and improving decision-making, with success "
 "depending on personal investment. Empowerment also enhances digital literacy "
 "and develops skills in the digital world."
-msgstr "Gagner en confiance en soi et améliorer la prise de décision, avec un succès dépendant de l'investissement personnel. L'autonomisation améliore également la littératie numérique et développe des compétences dans le monde numérique."
+msgstr ""
+"Gagner en confiance en soi et améliorer la prise de décision, avec un succès "
+"dépendant de l'investissement personnel. L'autonomisation améliore également "
+"la littératie numérique et développe des compétences dans le monde numérique."
 
-#: templates/pages/home.html:107
+#: templates/pages/home.html:237
 msgid "Flexibility Icon"
 msgstr "Icône de la flexibilité"
 
-#: templates/pages/home.html:107
+#: templates/pages/home.html:237
 msgid "Flexibility"
 msgstr "Flexibilité"
 
-#: templates/pages/home.html:110
+#: templates/pages/home.html:240
 msgid ""
 "Availability 24/7, giving you the freedom to work at your own pace. This "
 "approach helps save time and money while increasing productivity, making it "
 "easier to balance tasks efficiently."
-msgstr "Disponibilité 24/7, vous donnant la liberté de travailler à votre rythme. Cette approche permet de gagner du temps et de l'argent tout en augmentant la productivité, facilitant ainsi l'équilibre des tâches."
+msgstr ""
+"Disponibilité 24/7, vous donnant la liberté de travailler à votre rythme. "
+"Cette approche permet de gagner du temps et de l'argent tout en augmentant "
+"la productivité, facilitant ainsi l'équilibre des tâches."
 
-#: templates/pages/home.html:119
+#: templates/pages/home.html:249
 msgid "Inclusivity Icon"
 msgstr "Icône de l'inclusivité"
 
-#: templates/pages/home.html:119
+#: templates/pages/home.html:249
 msgid "Inclusivity"
 msgstr "Inclusivité"
 
-#: templates/pages/home.html:122
+#: templates/pages/home.html:252
 msgid ""
 "Adaptability to all learning styles, providing a flexible and personalized "
 "approach to education. With virtual expert support always available, you "
 "have the freedom to be yourself while learning in a way that suits you best."
-msgstr "Adaptabilité à tous les styles d'apprentissage, offrant une approche flexible et personnalisée de l'éducation. Avec un soutien virtuel d'experts toujours disponible, vous avez la liberté d'être vous-même tout en apprenant de la manière qui vous convient le mieux."
+msgstr ""
+"Adaptabilité à tous les styles d'apprentissage, offrant une approche "
+"flexible et personnalisée de l'éducation. Avec un soutien virtuel d'experts "
+"toujours disponible, vous avez la liberté d'être vous-même tout en apprenant "
+"de la manière qui vous convient le mieux."
 
-#: templates/pages/home.html:125
+#: templates/pages/home.html:255
 msgid "Equal Opportunity Icon"
 msgstr "Icône de l'égalité des chances"
 
-#: templates/pages/home.html:125
+#: templates/pages/home.html:255
 msgid "Equal Opportunity"
 msgstr "Égalité des chances"
 
-#: templates/pages/home.html:128
+#: templates/pages/home.html:258
 msgid ""
 "Access to quality program content is equal for everyone. Each person finds "
 "the learning method that suits them best, with fair rules ensuring everyone "
 "has equitable access to high-quality content."
-msgstr "L'accès à un contenu de programme de qualité est égal pour tous. Chacun trouve la méthode d'apprentissage qui lui convient le mieux, avec des règles équitables garantissant un accès équitable à un contenu de haute qualité."
+msgstr ""
+"L'accès à un contenu de programme de qualité est égal pour tous. Chacun "
+"trouve la méthode d'apprentissage qui lui convient le mieux, avec des règles "
+"équitables garantissant un accès équitable à un contenu de haute qualité."
 
-#: templates/pages/home.html:141
+#: templates/pages/home.html:271
 msgid "Edu AI Approach"
 msgstr "Approche Edu AI"
 
-#: templates/pages/home.html:143
+#: templates/pages/home.html:273
 msgid ""
 "Combines adaptive learning (controlled by the platform) and self-directed "
 "learning (controlled by the student). Students can speed up, slow down, or "
 "navigate differently with our algorithms, which enhance mastery of one "
 "concept or skill at a time."
-msgstr "Combine apprentissage adaptatif (contrôlé par la plateforme) et apprentissage autodirigé (contrôlé par l'élève). Les élèves peuvent accélérer, ralentir ou naviguer différemment grâce à nos algorithmes, qui améliorent la maîtrise d'un concept ou d'une compétence à la fois."
+msgstr ""
+"Combine apprentissage adaptatif (contrôlé par la plateforme) et "
+"apprentissage autodirigé (contrôlé par l'élève). Les élèves peuvent "
+"accélérer, ralentir ou naviguer différemment grâce à nos algorithmes, qui "
+"améliorent la maîtrise d'un concept ou d'une compétence à la fois."
 
-#: templates/pages/home.html:155 templates/pages/home.html:162
+#: templates/pages/home.html:285 templates/pages/home.html:291
 msgid "Comprehensive Review"
 msgstr "Révision complète"
 
-#: templates/pages/home.html:157
+#: templates/pages/home.html:287
 msgid "Detailed lessons divided into major topics"
 msgstr "Leçons détaillées divisées en grands sujets"
 
-#: templates/pages/home.html:158
+#: templates/pages/home.html:288
 msgid "Adaptive quizzes by chapter and subchapter"
 msgstr "Quiz adaptatifs par chapitre et sous-chapitre"
 
-#: templates/pages/home.html:159
+#: templates/pages/home.html:289
 msgid "Immediate support and advice"
 msgstr "Soutien et conseils immédiats"
 
-#: templates/pages/home.html:171 templates/pages/home.html:178
+#: templates/pages/home.html:300 templates/pages/home.html:306
 msgid "Review Assistance"
 msgstr "Assistance à la révision"
 
-#: templates/pages/home.html:173
+#: templates/pages/home.html:302
 msgid "Complete review topics"
 msgstr "Sujets de révision complets"
 
-#: templates/pages/home.html:174
+#: templates/pages/home.html:303
 msgid "Optional hints"
 msgstr "Astuces facultatives"
 
-#: templates/pages/home.html:175
+#: templates/pages/home.html:304
 msgid "Guidance and support at your fingertips"
 msgstr "Conseils et soutien à portée de main"
 
-#: templates/pages/home.html:188 templates/pages/home.html:195
+#: templates/pages/home.html:316 templates/pages/home.html:322
 msgid "In-Class Exercises"
 msgstr "Exercices en classe"
 
-#: templates/pages/home.html:190
+#: templates/pages/home.html:318
 msgid "Exercises with Closed Book"
 msgstr "Exercices sans consultation"
 
-#: templates/pages/home.html:191
+#: templates/pages/home.html:319
 msgid "Clarity on topics and relative difficulty levels"
 msgstr "Clarté des sujets et des niveaux de difficulté relatifs"
 
-#: templates/pages/home.html:192
+#: templates/pages/home.html:320
 msgid "Guidance and support at hand"
 msgstr "Conseils et soutien à portée de main"
 
-#: templates/pages/home.html:207 templates/pages/home.html:214
+#: templates/pages/home.html:334 templates/pages/home.html:340
 msgid "Open Book Exercises"
 msgstr "Exercices avec consultation"
 
-#: templates/pages/home.html:209
+#: templates/pages/home.html:336
 msgid "Exercises with Open Book Access"
 msgstr "Exercices avec accès aux documents"
 
-#: templates/pages/home.html:210
+#: templates/pages/home.html:337
 msgid "Optional guidelines or defined methodologies"
 msgstr "Consignes facultatives ou méthodologies définies"
 
-#: templates/pages/home.html:211
+#: templates/pages/home.html:338
 msgid "Immediate guidance, corrections, and recommendations"
 msgstr "Guidance immédiate, corrections et recommandations"
 
-#: templates/pages/home.html:226
+#: templates/pages/home.html:352
 msgid "Personalize Your Learning"
 msgstr "Personnalisez votre apprentissage"
 
-#: templates/pages/home.html:226
+#: templates/pages/home.html:352
 msgid "with MAiProf"
 msgstr "avec MAiProf"
 
-#: templates/pages/home.html:227
+#: templates/pages/home.html:353
 msgid "Detailed explanations of difficult lesson parts"
 msgstr "Explications détaillées des parties difficiles des leçons"
 
-#: templates/pages/home.html:233
+#: templates/pages/home.html:359
 msgid "Our team: at the forefront of innovation and academic excellence"
-msgstr "Notre équipe : à la pointe de l'innovation et de l'excellence académique"
+msgstr ""
+"Notre équipe : à la pointe de l'innovation et de l'excellence académique"
 
-#: templates/pages/home.html:237
+#: templates/pages/home.html:363
 msgid ""
 "Developed by a Tunisian team of talents, graduates of MIT, and gold and "
 "silver medalists in the International Olympiads in Mathematics and "
 "Informatics. Based on an academically recognized research project, it offers "
 "comprehensive content aligned with the national curriculum, developed and "
 "assessed by experienced teachers and educators."
-msgstr "Développé par une équipe tunisienne de talents, diplômés du MIT, et médaillés d'or et d'argent aux Olympiades internationales de mathématiques et d'informatique. Basé sur un projet de recherche reconnu académiquement, il offre un contenu complet aligné avec le programme national, développé et évalué par des enseignants et éducateurs expérimentés."
+msgstr ""
+"Développé par une équipe tunisienne de talents, diplômés du MIT, et "
+"médaillés d'or et d'argent aux Olympiades internationales de mathématiques "
+"et d'informatique. Basé sur un projet de recherche reconnu académiquement, "
+"il offre un contenu complet aligné avec le programme national, développé et "
+"évalué par des enseignants et éducateurs expérimentés."
 
-#: templates/pages/home.html:244
+#: templates/pages/home.html:370
 msgid "Supports detailed courses"
 msgstr "Soutient des cours détaillés"
 
-#: templates/pages/home.html:248
+#: templates/pages/home.html:374
 msgid "MCQ per section"
 msgstr "QCM par section"
 
-#: templates/pages/home.html:252
+#: templates/pages/home.html:378
 msgid "Exercises per section"
 msgstr "Exercices par section"
 
-#: templates/pages/home.html:256
+#: templates/pages/home.html:382
 msgid "Review exercises (per chapter, trimester, and full academic year)"
-msgstr "Exercices de révision (par chapitre, trimestre et année scolaire complète)"
+msgstr ""
+"Exercices de révision (par chapitre, trimestre et année scolaire complète)"
 
-#: templates/pages/home.html:265
+#: templates/pages/home.html:391
 msgid "Our Offers"
 msgstr "Nos offres"
 
-#: templates/pages/home.html:266
+#: templates/pages/home.html:392
 msgid "Exceptional prices for the launch in Morocco!"
 msgstr "Prix exceptionnels pour le lancement au Maroc !"
 
-#: templates/pages/home.html:273
+#: templates/pages/home.html:399
 msgid "Offer Icon"
 msgstr "Icône de l'offre"
 
-#: templates/pages/home.html:277
+#: templates/pages/home.html:403
 msgid "Monthly"
 msgstr "Mensuel"
 
-#: templates/pages/home.html:280
+#: templates/pages/home.html:406
 msgid "Quarterly"
 msgstr "Trimestriel"
 
-#: templates/pages/home.html:283
+#: templates/pages/home.html:409
 msgid "Annually"
 msgstr "Annuel"
 
-#: templates/pages/home.html:295
+#: templates/pages/home.html:421
 msgid "Student Testimonials"
 msgstr "Témoignages d'étudiants"
 
-#: templates/pages/home.html:336
+#: templates/pages/home.html:462
 msgid "Frequently Asked Questions"
 msgstr "Questions fréquentes"
 
-#: templates/pages/home.html:382
+#: templates/pages/home.html:510
 msgid "Get in touch with us."
 msgstr "Contactez-nous."
 
-#: templates/pages/home.html:382
+#: templates/pages/home.html:510
 msgid "We're here to assist you."
 msgstr "Nous sommes là pour vous aider."
 
-#: templates/pages/home.html:413
+#: templates/pages/home.html:539
 msgid "Leave us a Message"
 msgstr "Laissez-nous un message"
 
+#~ msgid "About"
+#~ msgstr "À propos"
+
+#~ msgid "Services"
+#~ msgstr "Services"
+
+#~ msgid "New Chat"
+#~ msgstr "Nouvelle discussion"
+
+#~ msgid ""
+#~ "HB Development se spécialise dans la fourniture de services "
+#~ "technologiques de haute qualité. Rejoignez-nous pour vivre l'excellence, "
+#~ "le professionnalisme et l'innovation."
+#~ msgstr ""
+#~ "HB Development se spécialise dans la fourniture de services "
+#~ "technologiques de haute qualité. Rejoignez-nous pour vivre l'excellence, "
+#~ "le professionnalisme et l'innovation."
+
+#~ msgid ""
+#~ "HB Development, services technologiques, solutions informatiques, "
+#~ "services professionnels en technologie, innovation technologique"
+#~ msgstr ""
+#~ "HB Development, services technologiques, solutions informatiques, "
+#~ "services professionnels en technologie, innovation technologique"
+
+#~ msgid "HB Development - Excellence dans les services technologiques"
+#~ msgstr "HB Development - Excellence dans les services technologiques"
+
+#~ msgid "site web"
+#~ msgstr "site web"
+
+#~ msgid "Déconnexion"
+#~ msgstr "Déconnexion"

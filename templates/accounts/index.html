@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"/>
-
+    {% block seo %}
     <meta name="description" content="{% trans "Access your EduAI dashboard to manage your profile, view learning insights, and track your educational progress with AI-powered analytics and personalized tools." %}">
     <meta name="keywords" content="{% trans "EduAI, user dashboard, profile management, AI education, learning analytics, personalized education" %}">
     <meta property="og:title" content="{% trans "My Dashboard - EduAI" %}">
@@ -22,7 +22,7 @@
     <meta name="twitter:title" content="{% trans "My Dashboard - EduAI" %}">
     <meta name="twitter:description" content="{% trans "Explore your EduAI dashboard to access personalized learning tools and AI-driven educational insights." %}">
     <meta name="twitter:image" content="{% static 'images/logo.png' %}">
-
+    {% endblock %}
     <!-- CSS Files -->
     <link rel="stylesheet" href="{% static 'assets/css/tailwind.output.css' %}" />
 
@@ -49,12 +49,14 @@
 
 
     <!-- Chart.js Scripts -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-      defer
-    ></script>
-    <script src="{% static 'assets/js/charts-lines.js' %}" defer></script>
-    <script src="{% static 'assets/js/charts-pie.js' %}" defer></script>
+<!--    <script-->
+<!--      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"-->
+<!--      defer-->
+<!--    ></script>-->
+<!--    <script src="{% static 'assets/js/charts-lines.js' %}" defer></script>-->
+<!--    <script src="{% static 'assets/js/charts-pie.js' %}" defer></script>-->
+    {% block css %}
+    {% endblock %}
     <style>
         /* RTL specific adjustments */
         {% if LANGUAGE_CODE == 'ar' %}
@@ -540,10 +542,11 @@
 
 
         <main class="h-full overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
-    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-        {% trans "Hello" %} {{ user.username }}
-    </h2>
+            {% block content %}
+                 <div class="container px-6 mx-auto grid">
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                {% trans "Hello" %} {{ user.username }}
+            </h2>
 
     <!-- Cards Section -->
 <!--    <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">-->
@@ -612,6 +615,7 @@
 <!--        </div>-->
 <!--    </div>-->
 </div>
+            {% endblock %}
         </main>
       </div>
     </div>

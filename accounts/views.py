@@ -290,11 +290,12 @@ def profile_edit(request):
 
     return render(request, 'accounts/profile_edit.html')
 
-
+@login_required
 def user_logout(request):
     logout(request)
     return redirect('home')
 
+@login_required
 class CustomPasswordChangeView(PasswordChangeView):
     template_name = 'accounts/password_change_form.html'
     success_url = reverse_lazy('password_change_done')

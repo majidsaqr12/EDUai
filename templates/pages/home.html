@@ -538,13 +538,13 @@
 </div>
 
 
-    <div class="container mt-5 mb-5">
+<div class="container mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-md-3">
             <a href="{% url 'book_appointment' %}" id="card-link">
                 <div id="custom-card">
                     <div id="icon">→</div>
-                    Book an Appointment
+                    {% trans "Book an Appointment" %}
                 </div>
             </a>
         </div>
@@ -553,14 +553,12 @@
             <a href="{% url 'guide' %}" id="card-link">
                 <div id="custom-card">
                     <div id="icon">→</div>
-                    My Guide
+                    {% trans "My Guide" %}
                 </div>
             </a>
         </div>
     </div>
 </div>
-
-
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
