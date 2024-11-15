@@ -6,19 +6,19 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def subjects_view(request):
-    return render(request, 'accounts/subjects.html')
+    return render(request, 'accounts/apis_endpoint/subjects.html')
 
 @login_required
 def chatbot_view(request):
-    return render(request, 'accounts/chatbot.html')
+    return render(request, 'accounts/apis_endpoint/chatbot.html')
 
 @login_required
 def response_view(request):
-    return render(request, 'accounts/response.html')
+    return render(request, 'accounts/apis_endpoint/response.html')
 
 @login_required
 def quiz_view(request):
-    return render(request, 'accounts/quiz.html')
+    return render(request, 'accounts/apis_endpoint/quiz.html')
 
 
 BASE_URL = "http://localhost:8000"
