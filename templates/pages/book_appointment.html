@@ -1,8 +1,22 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load i18n %}
 
 {% block hero_section %}
+{% endblock %}
+
+{% block seo %}
+    <meta name="description" content="{% trans "Planifiez votre rendez-vous avec EduAI pour explorer des solutions d'apprentissage personnalisées adaptées à vos besoins éducatifs. Utilisez notre plateforme de rendez-vous pour organiser des sessions individuelles avec nos experts en intelligence artificielle éducative." %}">
+    <meta name="keywords" content="{% trans "EduAI, rendez-vous éducatif, consultation en éducation IA, solutions d'apprentissage, réservation de rendez-vous" %}">
+    <meta property="og:title" content="{% trans "Planifiez votre rendez-vous - EduAI" %}">
+    <meta property="og:description" content="{% trans "Réservez une consultation avec EduAI pour découvrir nos solutions d'apprentissage personnalisées et propulsées par IA." %}">
+    <meta property="og:image" content="{% static 'images/appointment.jpg' %}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% trans "Planifiez votre rendez-vous - EduAI" %}">
+    <meta name="twitter:description" content="{% trans "Découvrez comment EduAI peut révolutionner votre apprentissage avec des consultations personnalisées." %}">
+    <meta name="twitter:image" content="{% static 'images/appointment.jpg' %}">
 {% endblock %}
 
 {% block css %}
@@ -48,30 +62,31 @@
 {% endblock %}
 
 {% block content %}
+{% load i18n %}
 <div class="container form-section">
     <div class="form-container">
-        <h2 class="form-title">Schedule Your Appointment</h2>
+        <h2 class="form-title">{% trans "Schedule Your Appointment" %}</h2>
         <form method="POST">
             {% csrf_token %}
             <div class="row mb-3">
                 <!-- First Name -->
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="first_name">First Name</label>
+                        <label for="first_name">{% trans "First Name" %}</label>
                         {{ form.first_name }}
                     </div>
                 </div>
                 <!-- Last Name -->
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="last_name">Last Name</label>
+                        <label for="last_name">{% trans "Last Name" %}</label>
                         {{ form.last_name }}
                     </div>
                 </div>
                 <!-- Email -->
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="email">Email Address</label>
+                        <label for="email">{% trans "Email Address" %}</label>
                         {{ form.email }}
                     </div>
                 </div>
@@ -81,30 +96,31 @@
                 <!-- Phone Number -->
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
+                        <label for="phone">{% trans "Phone Number" %}</label>
                         {{ form.phone }}
                     </div>
                 </div>
                 <!-- Appointment Date -->
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="appointment_date">Appointment Date</label>
+                        <label for="appointment_date">{% trans "Appointment Date" %}</label>
                         {{ form.appointment_date }}
                     </div>
                 </div>
                 <!-- Appointment Time -->
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="appointment_time">Appointment Time</label>
+                        <label for="appointment_time">{% trans "Appointment Time" %}</label>
                         {{ form.appointment_time }}
                     </div>
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-book">Book an Appointment</button>
+            <button type="submit" class="btn btn-book">{% trans "Book an Appointment" %}</button>
         </form>
     </div>
 </div>
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>

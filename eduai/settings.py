@@ -8,7 +8,13 @@ SECRET_KEY = 'django-insecure-5qc0wnqq_hrq7w5wq^5*()8jp(=@!t+c5sg=nx#hhck+78zh0e
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 INSTALLED_APPS = [
@@ -25,17 +31,21 @@ INSTALLED_APPS = [
     'pages',
     'accounts',
     'subjects',
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_otp.middleware.OTPMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = 'eduai.urls'
@@ -82,26 +92,27 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-
-LANGUAGES = [
-    ('en', _('English')),
-    ('fr', _('French')),
-]
-
-# Set the Default Language
-LANGUAGE_CODE = 'en'
-
-# Path for Translation Files
-LOCALE_PATHS = (
-    BASE_DIR / 'locale',
-)
+# Set the default language to French
+LANGUAGE_CODE = 'fr'
 
 TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
 USE_TZ = True
+
+# Enable localization and translation
+USE_I18N = True
+USE_L10N = True
+
+# List of available languages
+LANGUAGES = [
+    ('fr', 'Français'),
+    ('en', 'English'),
+    ('ar', 'Arabic')
+]
+
+# Define where the translations will be stored
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
 
 
 STATIC_URL = 'static/'

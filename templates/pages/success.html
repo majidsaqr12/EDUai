@@ -3,13 +3,18 @@
 {% block title %}Thank You for Registering - HB Development{% endblock %}
 {% load static %}
 {% block seo %}
-<meta name="description" content="You have successfully registered at HB Development. We will review your submission and contact you shortly with more information about the next steps.">
-<meta name="keywords" content="Successful Registration, HB Development, Registration Confirmation, Technology Services, IT Solutions">
-<meta property="og:title" content="Thank You for Registering at HB Development!">
-<meta property="og:description" content="You have successfully registered at HB Development. We will review your submission and contact you shortly with more information about the next steps.">
-<meta property="og:image" content="{% static 'images/logo1.jpg' %}">
-<meta property="og:type" content="website">
+    <meta name="description" content="Thank you for registering at EduAI. Your submission was successful, and we will be in touch soon with the next steps to get you started on your AI-powered educational journey.">
+    <meta name="keywords" content="EduAI, registration success, account confirmation, welcome, next steps, AI in education, personalized learning">
+    <meta property="og:title" content="Thank You for Registering at EduAI!">
+    <meta property="og:description" content="We appreciate your registration at EduAI. Our team will review your information and reach out shortly with details on how to proceed with our AI-driven educational services.">
+    <meta property="og:image" content="{% static 'images/logo1.jpg' %}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Thank You for Registering at EduAI!">
+    <meta name="twitter:description" content="Your registration was successful. We will contact you soon with the next steps to get started with EduAI’s personalized learning platform.">
+    <meta name="twitter:image" content="{% static 'images/logo1.jpg' %}">
 {% endblock %}
+
 
 {% block hero_section %}
 {% endblock %}
@@ -21,47 +26,69 @@
 <style>
     .thank-you-message {
         text-align: center;
-        padding: 50px 15px;
+        padding: 60px 20px;
         border-radius: 15px;
         max-width: 700px;
-        margin: 50px auto;
-        background: #1e1e1e;
-        color: #f5f5f5;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        margin: 60px auto;
+        background: #e0f7fa; /* Light pastel blue background */
+        color: #01579b; /* Darker blue text for contrast */
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
     }
 
     .thank-you-message i {
         font-size: 100px;
-        color: #e91e63;
-        margin-bottom: 20px;
+        color: #0288d1; /* Soft blue icon color */
+        margin-bottom: 15px;
     }
 
     .thank-you-message h1 {
         font-size: 2.5em;
-        margin-top: 20px;
         font-weight: bold;
-        color: #e91e63;
+        color: #0288d1; /* Matching soft blue tone */
+        margin-top: 10px;
     }
 
     .thank-you-message p {
-        font-size: 1.2em;
-        color: #c0c0c0;
-        margin-top: 10px;
-        line-height: 1.5;
+        font-size: 1.1em;
+        color: #01579b; /* Darker blue for text */
+        margin-top: 15px;
+        line-height: 1.6;
+    }
+
+    .thank-you-message::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100px;
+        width: 400px;
+        height: 100%;
+        background: rgba(2, 136, 209, 0.1); /* Light overlay in soft blue */
+        transform: rotate(30deg);
     }
 
     .btn-primary-1 {
-        background: rgba(255, 255, 255, 0.2);
-        border: 1px solid #FFFFFF;
+        background: #0288d1;
+        border: none;
         border-radius: 4px;
-        color:#fff;
+        padding: 10px 25px;
+        color: #fff;
+        font-size: 1em;
+        transition: all 0.3s ease;
     }
-    
+
+    .btn-primary-1:hover {
+        background: #039be5;
+        color: #fff;
+    }
+
 </style>
 
 <div class="thank-you-message">
     <i class="ion-checkmark-circle"></i>
     <h1>Thank You for Registering!</h1>
+    <p>Your registration was successful. We’ll review your submission and reach out soon with the next steps.</p>
     <div class="mt-5">
         <a href="{% url 'home' %}" class="btn btn-primary-1">Back to Home</a>
     </div>

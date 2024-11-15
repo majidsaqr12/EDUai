@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
@@ -13,7 +12,8 @@ from datetime import datetime
 from django.contrib.auth.models import User
 from django.utils.crypto import get_random_string
 from django.urls import reverse
-
+from django.urls import reverse_lazy
+from django.contrib.auth.views import PasswordChangeView
 
 
 def user_login(request):
@@ -25,7 +25,7 @@ def user_login(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')
+                return redirect('profile_edit')
             else:
                 messages.error(request, 'Invalid username or password.')
         else:
@@ -258,4 +258,43 @@ def password_reset_form(request, user_id):
 
 @login_required
 def profile_view(request):
-    return render(request, 'accounts/profile.html', {'user': request.user})
+    profile = Profile.objects.get(user=request.user)
+    return render(request, 'accounts/index.html', {'user': request.user, 'profile': profile})
+
+@login_required
+def profile_edit(request):
+    if request.method == "POST":
+        profile = request.user.profile
+        profile.first_name = request.POST.get('first_name')
+        profile.last_name = request.POST.get('last_name')
+        profile.phone_number = request.POST.get('phone_number')
+        profile.gender = request.POST.get('gender')
+
+        # Check if a valid date is provided
+        date_of_birth = request.POST.get('date_of_birth')
+        if date_of_birth:
+            try:
+                # Try to parse the date to confirm it's in the correct format
+                profile.date_of_birth = datetime.strptime(date_of_birth, "%Y-%m-%d").date()
+            except ValueError:
+                messages.error(request, "Invalid date format. Please use YYYY-MM-DD.")
+                return redirect('profile_edit')
+
+        # Handle image upload
+        if 'image' in request.FILES:
+            profile.image = request.FILES['image']
+
+        profile.save()
+        messages.success(request, "Profile updated successfully")
+        return redirect('profile_edit')
+
+    return render(request, 'accounts/profile_edit.html')
+
+
+def user_logout(request):
+    logout(request)
+    return redirect('home')
+
+class CustomPasswordChangeView(PasswordChangeView):
+    template_name = 'accounts/password_change_form.html'
+    success_url = reverse_lazy('password_change_done')

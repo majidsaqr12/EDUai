@@ -19,6 +19,16 @@
                 <div class="card-body p-4">
                     <h5 class="card-title text-center mb-4">Email Verification</h5>
                     <p class="text-center text-muted mb-4">Enter the verification code sent to your email.</p>
+
+                    <!-- Error message section -->
+                    {% if form.errors %}
+                        <div class="alert alert-danger" role="alert" style="border-radius: 10px; font-size: 1rem; padding: 15px; color: #721c24; background-color: #f8d7da; border-color: #f5c6cb;">
+                            {% for error in form.non_field_errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
                     <form method="POST" id="verify-form">
                         {% csrf_token %}
                         <div class="form-group mb-3">
