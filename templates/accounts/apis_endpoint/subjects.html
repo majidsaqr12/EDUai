@@ -90,7 +90,7 @@
     <div id="subject-container">
         <!-- Mathematics Card -->
         <div class="subject-item">
-            <div class="card" id="custom-card" onclick="sendApiRequestSubjects()">
+            <div class="card" id="custom-card" onclick="">
                 <div class="card-body">
                     <div class="d-flex justify-content-between">
                         <img src="{% static 'images/icons/mathematics.png' %}" alt="{% trans 'Mathematics Icon' %}" style="width: 30px; height: 30px;">
@@ -220,42 +220,8 @@
     </div>
 </div>
 
-<script>
+{% endblock %}
 
-function sendApiRequestSubjects() {
-    const courseId = 314; // fixed course ID
-    const studentId = "{{ request.user.id }}"; // current logged-in user's ID
+{% block script %}
 
-    fetch("/api/load_path/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "X-CSRFToken": "{{ csrf_token }}" // Ensure CSRF token is included for Django
-        },
-        body: new URLSearchParams({
-            courseId: courseId,
-            studentId: studentId
-        })
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Network response was not ok");
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (data.success) {
-            console.log("Course path loaded successfully:", data.data);
-            window.location.href = "/chatbot-view"; // Redirect on success
-        } else {
-            console.error("Failed to load course path:", data.error);
-            document.getElementById("responseContainer").innerText = "Failed to load course path.";
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        document.getElementById("responseContainer").innerText = "An error occurred: " + error.message;
-    });
-}
-</script>
 {% endblock %}
