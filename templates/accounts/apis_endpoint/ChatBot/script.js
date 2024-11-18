@@ -42,7 +42,7 @@ submitButton.addEventListener('click', function() {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then(response => response.json()) 
     .then(data => {
         // Hide loading spinner
         loadingSpinner.style.display = 'none';

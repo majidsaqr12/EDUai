@@ -34,7 +34,7 @@ const subjectsData = [
     const userId = 21;
     const formData = new FormData();
     formData.append('courseId', subjectId);
-    formData.append('studentId', userId);
+    formData.append('studentId', userId); 
   
     fetch("http://57.128.91.158/load_path/", {
       method: "POST",
