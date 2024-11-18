@@ -1,0 +1,83 @@
+ /* Your existing CSS styles */
+        /* Header Styles */
+        #chat-header h4 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        #chat-subtext {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        /* Textarea Styles */
+        #question-input {
+            width: 100%;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 1rem;
+            border: 1px solid #ced4da;
+            resize: none;
+            box-shadow: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #question-input:focus {
+            border-color: #80bdff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+        }
+
+        /* Submit Button Styles */
+        #submit-button {
+            background-color: #343a40;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            padding: 10px 20px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        #submit-button:hover {
+            background-color: #23272b;
+        }
+
+        #submit-button:active {
+            background-color: #1d1f21;
+        }
+
+        /* Loading Spinner Styles */
+        #loading-spinner {
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid #343a40;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+            display: none; /* Hide by default */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Response Container Styles */
+        #response-container {
+            background-color: #e9f7fe;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 1rem;
+            color: #333;
+            margin-top: 20px;
+        }
