@@ -38,7 +38,7 @@ submitButton.addEventListener('click', function() {
     formData.append('query_request', JSON.stringify({ query: query }));
 
     // Send POST request
-    fetch('http://57.128.91.158/query/', {
+    fetch('https://aiar-svc.eduai.tech/query/', {
         method: 'POST',
         body: formData
     })
@@ -48,7 +48,9 @@ submitButton.addEventListener('click', function() {
         loadingSpinner.style.display = 'none';
         submitText.style.display = 'inline';
         submitButton.disabled = false;
-
+        localStorage.setItem('chatResponse', data.response );
+        localStorage.setItem('chatQuestion', query );
+        window.location.href = '/templates/accounts/apis_endpoint/Response/index.html';
         // Display the response
         responseContainer.innerHTML = data.response || 'No response from server.';
     })

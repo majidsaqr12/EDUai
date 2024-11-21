@@ -1,58 +1,40 @@
-
-<div id="quiz-header" class="quiz-header">
-    <button id="start-quiz-button">Quiz</button>
-    <a href="subjects" class="back-link">Go back to EduGuide &rarr;</a>
-</div>
-
-
-<div class="quiz-container">
-    <!-- Question 1 -->
-    <div class="quiz-card">
-        <h5>Question 1 - Lesson: Arithmetic Operations</h5>
-        <p><em>f</em> being represented by the following curve:</p>
-        <!-- Add curve image if needed -->
-
-        <div class="options">
-            <label>
-                <input type="radio" name="question1" value="option1"> 
-                <span>f is continuous at -2</span>
-            </label>
-            <label>
-                <input type="radio" name="question1" value="option2">
-                <span>f is continuous at 1</span>
-            </label>
-            <label>
-                <input type="radio" name="question1" value="option3">
-                <span>f is continuous from the right at 1</span>
-            </label>
-            <label>
-                <input type="radio" name="question1" value="option4">
-                <span>I don’t know</span>
-            </label>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Include Bootstrap for better styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="quiz-header" class="quiz-header">
+        <h2>Quiz</h2>
+        <a href="subjects.html" class="back-link btn btn-secondary">Go back to EduGuide &rarr;</a>
     </div>
 
-    <!-- Question 2 -->
-    <div class="quiz-card">
-        <h5>Question 2 - Lesson: Arithmetic Operations</h5>
-        <p><em>f</em> being represented by the following curve:</p>
-
-        <div class="options">
-            <label>
-                <input type="radio" name="question2" value="true">
-                <span>True</span>
-            </label>
-            <label>
-                <input type="radio" name="question2" value="false">
-                <span>False</span>
-            </label>
-        </div>
+    <div class="quiz-container">
+        <!-- Quiz questions will be dynamically injected here -->
+        <form id="quiz-form">
+            <div id="quiz-questions">
+                <!-- Dynamic Questions -->
+            </div>
+            <!-- Confirm Button -->
+            <div class="confirm-container">
+                <button type="button" id="confirm-button" class="btn btn-primary">Confirm</button>
+            </div>
+        </form>
     </div>
 
-    <!-- Add more questions as needed -->
-</div>
+    <!-- Result Container -->
+    <div id="result-container" class="text-center">
+        <!-- Quiz results will be displayed here -->
+    </div>
 
-<!-- Confirm Button -->
-<div class="confirm-container">
-    <button id="confirm-button">Confirm</button>
-</div>
+    <script src="./script.js"></script>
+</body>
+</html>
