@@ -1,91 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<div id="response-page" class="container mt-5 p-4 border rounded shadow-sm">
-    <div id="response-header" class="text-center mb-4">
-        <img src="{% static 'images/icons/robot.png' %}" alt="{% trans 'Robot Icon' %}" style="width: 50px;">
-        <h4 class="mt-3">Here's the answer for your question</h4>
-        <p class="text-muted" id="question-text">What are the layers of the atmosphere?</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="response-page" class="container mt-5 p-4 border rounded shadow-sm">
+        <div id="response-header" class="text-center mb-4">
+            <img src="{% static 'images/icons/robot.png' %}" alt="{% trans 'Robot Icon' %}" style="width: 50px;">
+            <h4 class="mt-3">Here's the answer for your question</h4>
+            <p class="text-muted" id="question-text">What are the layers of the atmosphere?</p>
+        </div>
+
+
+        <div id="response-content">
+            <p>The atmosphere is composed of several layers:</p>
+            <ol>
+                <li><strong>Troposphere:</strong> The layer closest to Earth's surface, where all weather phenomena
+                    occur.</li>
+                <li><strong>Stratosphere:</strong> Contains the ozone layer, which protects the Earth from harmful
+                    ultraviolet radiation.</li>
+                <li><strong>Mesosphere:</strong> The layer where meteors burn up upon entering Earth's atmosphere.</li>
+                <li><strong>Thermosphere:</strong> Contains the auroras, and temperatures increase with altitude.</li>
+                <li><strong>Exosphere:</strong> The outermost layer where the atmosphere gradually merges into outer
+                    space.</li>
+            </ol>
+        </div>
+
+        <div id="response-buttons" class="text-center mt-4">
+            <button id="quiz-button" onclick="openModal()">Quiz</button>
+            <a href="/templates/accounts/apis_endpoint/ChatBot/index.html" id="another-question-button"
+                class="btn btn-secondary">Another Question</a>
+        </div>
+
+        <p id="quiz-info" class="text-muted mt-4 text-center">
+            Want to test your knowledge? Click the 'Quiz' button to take a short quiz based on the question you asked.
+            Challenge yourself and see how much you've learned!
+        </p>
+
     </div>
 
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3>
+                Choose how many questions you want and the type of questions. Once you're ready, click 'Generate Quiz'
+                to start practicing.
+            </h3>
 
-    <div id="response-content">
-        <p>The atmosphere is composed of several layers:</p>
-        <ol>
-            <li><strong>Troposphere:</strong> The layer closest to Earth's surface, where all weather phenomena occur.</li>
-            <li><strong>Stratosphere:</strong> Contains the ozone layer, which protects the Earth from harmful ultraviolet radiation.</li>
-            <li><strong>Mesosphere:</strong> The layer where meteors burn up upon entering Earth's atmosphere.</li>
-            <li><strong>Thermosphere:</strong> Contains the auroras, and temperatures increase with altitude.</li>
-            <li><strong>Exosphere:</strong> The outermost layer where the atmosphere gradually merges into outer space.</li>
-        </ol>
+            <form id="quiz-form">
+                <div class="form-group">
+                    <label for="num-questions">Number of Questions*</label>
+                    <select id="num-questions" class="dropdown">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question-type">Question Type*</label>
+                    <select id="question-type" class="dropdown">
+                        <option value="multiple-choice">Multiple Choice</option>
+                        <option value="true-false">True/False</option>
+                    </select>
+                </div>
+
+                <button type="button" id="generate-quiz-button" onclick="generateQuiz()">
+                    Generate Quiz
+                </button>
+            </form>
+        </div>
     </div>
+    <script src="script.js"></script>
+</body>
 
-    <div id="response-buttons" class="text-center mt-4">
-        <button id="quiz-button" onclick="openModal()">Quiz</button>
-        <a href="/templates/accounts/apis_endpoint/ChatBot/index.html" id="another-question-button" class="btn btn-secondary">Another Question</a>
-    </div>
-
-    <p id="quiz-info" class="text-muted mt-4 text-center">
-        Want to test your knowledge? Click the 'Quiz' button to take a short quiz based on the question you asked. Challenge yourself and see how much you've learned!
-    </p>
-
-</div>
-
-<div id="quiz-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-button" onclick="closeModal()">&times;</span>
-        <h3>
-            Choose how many questions you want and the type of questions. Once you're ready, click 'Generate Quiz' to start practicing.
-        </h3>
-
-        <form id="quiz-form">
-            <div class="form-group">
-                <label for="num-questions">Number of Questions*</label>
-                <select id="num-questions" class="dropdown">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="question-type">Question Type*</label>
-                <select id="question-type" class="dropdown">
-                    <option value="multiple-choice">Multiple Choice</option>
-                    <option value="true-false">True/False</option>
-                </select>
-            </div>
-
-            <button type="button" id="generate-quiz-button" onclick="generateQuiz()">
-                Generate Quiz
-            </button>
-        </form>
-    </div>
-</div>
-
-  <script>
-    // Function to open the modal
-    function openModal() {
-        document.getElementById("quiz-modal").style.display = "flex";
-    }
-
-    // Function to close the modal
-    function closeModal() {
-        document.getElementById("quiz-modal").style.display = "none";
-    }
-
-    // Close modal when clicking outside the modal content
-    window.onclick = function(event) {
-        var modal = document.getElementById("quiz-modal");
-        if (event.target == modal) {
-            closeModal();
-        }
-    }
-
-    // Example function for generating the quiz
-    function generateQuiz() {
-        const numQuestions = document.getElementById("num-questions").value;
-        const questionType = document.getElementById("question-type").value;
-        alert(`Quiz generated with ${numQuestions} ${questionType} questions!`);
-        closeModal();
-    }
-</script>
+</html>
