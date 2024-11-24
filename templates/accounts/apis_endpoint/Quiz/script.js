@@ -3,13 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('confirm-button').addEventListener('click', submitQuiz);
 });
 
-
 function renderQuiz() {
     const quizContainer = document.getElementById('quiz-questions');
     const quizData = JSON.parse(localStorage.getItem('quizQuestions'));
-    console.log(quizData);
     
-
     if (!quizData || !Array.isArray(quizData) || quizData.length === 0) {
         quizContainer.innerHTML = '<p>No quiz data available. Please generate a quiz first.</p>';
         document.getElementById('confirm-button').disabled = true;
@@ -17,7 +14,6 @@ function renderQuiz() {
     }
 
     quizData.forEach((q, index) => {
-
         const quizCard = document.createElement('div');
         quizCard.classList.add('quiz-card');
 
@@ -32,11 +28,9 @@ function renderQuiz() {
         const optionsDiv = document.createElement('div');
         optionsDiv.classList.add('options');
 
-        const isTrueFalse = q.choices.length === 2 && q.choices.includes('True') && q.choices.includes('False');
-
         q.choices.forEach(choice => {
             const label = document.createElement('label');
-
+            
             const input = document.createElement('input');
             input.type = 'radio';
             input.name = `question${index}`;
@@ -65,8 +59,21 @@ function submitQuiz() {
         if (selectedOption) {
             const userAnswer = selectedOption.value;
             const correctAnswer = quizData[i]['correct answer'];
+            const selectedLabel = selectedOption.parentElement;
+            
+            // Color the selected answer
             if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                selectedLabel.classList.add('correct-answer');
                 correctAnswers++;
+            } else {
+                selectedLabel.classList.add('incorrect-answer');
+                // Highlight the correct answer
+                const allOptions = document.querySelectorAll(`input[name="question${i}"]`);
+                allOptions.forEach(option => {
+                    if (option.value.toLowerCase() === correctAnswer.toLowerCase()) {
+                        option.parentElement.classList.add('correct-highlight');
+                    }
+                });
             }
         }
     }
@@ -77,6 +84,7 @@ function submitQuiz() {
         <p>You answered <strong>${correctAnswers}</strong> out of <strong>${totalQuestions}</strong> questions correctly.</p>
     `;
 
+    // Disable all inputs and the confirm button
     const allInputs = document.querySelectorAll('input[type="radio"]');
     allInputs.forEach(input => input.disabled = true);
     document.getElementById('confirm-button').disabled = true;
