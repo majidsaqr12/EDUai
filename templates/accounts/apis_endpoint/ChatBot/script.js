@@ -1,24 +1,17 @@
-// Retrieve stored studentId and courseId from localStorage
 const studentId = localStorage.getItem('studentId');
 const courseId = localStorage.getItem('courseId');
 
-// Check if studentId and courseId are available
 if (!studentId || !courseId) {
     alert('Student ID or Course ID is missing. Please select a subject again.');
-    // Redirect to the subject selection page if needed
-    // window.location.href = '/path/to/subject/selection/page.html';
 }
 
-// Get DOM elements
 const submitButton = document.getElementById('submit-button');
 const questionInput = document.getElementById('question-input');
 const loadingSpinner = document.getElementById('loading-spinner');
 const submitText = document.getElementById('submit-text');
 const responseContainer = document.getElementById('response-container');
 
-// Add event listener to the submit button
 submitButton.addEventListener('click', function() {
-    // Get the query from the textarea
     const query = questionInput.value.trim();
 
     if (!query) {
@@ -26,37 +19,38 @@ submitButton.addEventListener('click', function() {
         return;
     }
 
-    // Show loading spinner
     loadingSpinner.style.display = 'inline-block';
     submitText.style.display = 'none';
     submitButton.disabled = true;
 
-    // Construct FormData
     const formData = new FormData();
     formData.append('studentId', studentId);
     formData.append('courseId', courseId);
     formData.append('query_request', JSON.stringify({ query: query }));
 
-    // Send POST request
-    fetch('https://aiar-svc.eduai.tech/query/', {
+    //if statement
+    const endpoint = courseId === 614 
+    ? "https://aifr-svc.eduai.tech/query" 
+    : courseId === 322 
+    ? "https://aien-svc.eduai.tech/query" 
+    : "https://aiar-svc.eduai.tech/query";
+
+    fetch(endpoint, {
         method: 'POST',
         body: formData
     })
     .then(response => response.json()) 
     .then(data => {
-        // Hide loading spinner
         loadingSpinner.style.display = 'none';
         submitText.style.display = 'inline';
         submitButton.disabled = false;
         localStorage.setItem('chatResponse', data.response );
         localStorage.setItem('chatQuestion', query );
         window.location.href = '/templates/accounts/apis_endpoint/Response/index.html';
-        // Display the response
         responseContainer.innerHTML = data.response || 'No response from server.';
     })
     .catch(error => {
         console.error('Error:', error);
-        // Hide loading spinner
         loadingSpinner.style.display = 'none';
         submitText.style.display = 'inline';
         submitButton.disabled = false;
