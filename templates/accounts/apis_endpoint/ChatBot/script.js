@@ -47,7 +47,7 @@ submitButton.addEventListener('click', function() {
         submitButton.disabled = false;
         localStorage.setItem('chatResponse', data.response );
         localStorage.setItem('chatQuestion', query );
-        // window.location.href = '/templates/accounts/apis_endpoint/Response/index.html';
+        window.location.href = '/templates/accounts/apis_endpoint/Response/index.html';
         responseContainer.innerHTML = data.response || 'No response from server.';
     })
     .catch(error => {
