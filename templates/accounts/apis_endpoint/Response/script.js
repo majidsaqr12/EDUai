@@ -31,11 +31,11 @@ async function generateQuiz() {
     }
 
     //if statement
-    const endpoint = courseId === 614 
-    ? "https://aifr-svc.eduai.tech/quiz" 
-    : courseId === 322 
-    ? "https://aien-svc.eduai.tech/quiz" 
-    : "https://aiar-svc.eduai.tech/quiz";
+    const endpoint = Number(courseId) === 614 
+    ? "https://aifr-svc.eduai.tech/query" 
+    : Number(courseId) === 609 
+    ? "https://aien-svc.eduai.tech/query" 
+    : "https://aiar-svc.eduai.tech/query";
 
     const formData = new FormData();
     formData.append("num_questions", numQuestions);
