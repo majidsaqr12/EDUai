@@ -7,7 +7,7 @@ const subjectsData = [
     { id: 319, name: "Science" },
     { id: 320, name: "Geography" },
     { id: 321, name: "Chemistry" },
-    { id: 322, name: "English" },
+    { id: 609, name: "English" },
     { id: 323, name: "Mathematics" }
   ];
   
@@ -37,11 +37,11 @@ const subjectsData = [
     formData.append('studentId', userId); 
 
   //if statement
-    const endpoint = subjectId === 614 
-      ? "https://aifr-svc.eduai.tech/load_path" 
-      : subjectId === 322 
-      ? "https://aien-svc.eduai.tech/load_path" 
-      : "https://aiar-svc.eduai.tech/load_path";
+  const endpoint = Number(courseId) === 614 
+  ? "https://aifr-svc.eduai.tech/query" 
+  : Number(courseId) === 609 
+  ? "https://aien-svc.eduai.tech/query" 
+  : "https://aiar-svc.eduai.tech/query";
   
     fetch(endpoint, {
       method: "POST",
