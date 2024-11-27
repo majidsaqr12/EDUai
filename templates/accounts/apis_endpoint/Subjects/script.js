@@ -1,6 +1,6 @@
 const subjectsData = [
     { id: 314, name: "Arabic" },
-    { id: 315, name: "French" },
+    { id: 614, name: "French" },
     { id: 316, name: "Physics" },
     { id: 317, name: "Biology" },
     { id: 318, name: "History" },
@@ -35,8 +35,15 @@ const subjectsData = [
     const formData = new FormData();
     formData.append('courseId', subjectId);
     formData.append('studentId', userId); 
+
+  //if statement
+    const endpoint = subjectId === 614 
+      ? "https://aifr-svc.eduai.tech/load_path" 
+      : subjectId === 322 
+      ? "https://aien-svc.eduai.tech/load_path" 
+      : "https://aiar-svc.eduai.tech/load_path";
   
-    fetch("https://aiar-svc.eduai.tech/load_path/", {
+    fetch(endpoint, {
       method: "POST",
       body: formData
     })

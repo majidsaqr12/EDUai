@@ -61,13 +61,11 @@ function submitQuiz() {
             const correctAnswer = quizData[i]['correct answer'];
             const selectedLabel = selectedOption.parentElement;
             
-            // Color the selected answer
             if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
                 selectedLabel.classList.add('correct-answer');
                 correctAnswers++;
             } else {
                 selectedLabel.classList.add('incorrect-answer');
-                // Highlight the correct answer
                 const allOptions = document.querySelectorAll(`input[name="question${i}"]`);
                 allOptions.forEach(option => {
                     if (option.value.toLowerCase() === correctAnswer.toLowerCase()) {
@@ -84,7 +82,6 @@ function submitQuiz() {
         <p>You answered <strong>${correctAnswers}</strong> out of <strong>${totalQuestions}</strong> questions correctly.</p>
     `;
 
-    // Disable all inputs and the confirm button
     const allInputs = document.querySelectorAll('input[type="radio"]');
     allInputs.forEach(input => input.disabled = true);
     document.getElementById('confirm-button').disabled = true;
